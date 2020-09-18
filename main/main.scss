@@ -1,0 +1,250 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.3);
+}
+header {
+  padding: 1.2rem 3rem;
+  .headContainer {
+    max-width: 112rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .mainLogo {
+      flex-grow: 0;
+    }
+
+    .searchBoxContainer {
+      min-width: auto;
+      flex-grow: 1;
+      margin-left: 2.5rem;
+      .searchBox {
+        position: relative;
+        .searchWrapper {
+          .sideBar {
+            display: none;
+          }
+          .searchField {
+            position: relative;
+            flex: 1 1 auto;
+            width: auto;
+            .searchFieldInput {
+              display: block;
+              appearance: none;
+              width: 100%;
+              padding: 0.8125rem 3.375rem;
+              padding-left: 3.6rem;
+              margin: 0 auto;
+              font-size: 16px;
+              line-height: 15px;
+              border-radius: 50em;
+              outline: 0;
+              box-shadow: none;
+              transition: background 0.2s;
+              border: 2px solid transparent;
+              background-color: #eee;
+              &:hover {
+                background-color: #ddd;
+              }
+            }
+            .visualSearchIcon {
+              position: absolute;
+              top: 50%;
+              right: 1rem;
+              border: 0;
+              transform: translateY(-50%);
+              background: none;
+              img {
+                width: 16px;
+                height: 16px;
+              }
+            }
+            .loupeIcon {
+              position: absolute;
+              top: 50%;
+              left: 1.5rem;
+              width: 16px;
+              height: 16px;
+              transform: translateY(-50%);
+            }
+          }
+        }
+        .dropdown {
+          display: none;
+          min-height: auto;
+          border-radius: 0 0 0.5rem 0.5rem;
+          left: -0.5rem;
+          width: calc(100% + 1rem);
+          padding: 1rem 0;
+          position: absolute;
+          height: 300px;
+          background: #fff;
+        }
+        .searchBoxFx::before {
+          position: absolute;
+          top: -0.5rem;
+          right: -0.5rem;
+          bottom: -0.5rem;
+          left: -0.5rem;
+          display: block;
+          width: calc(100% + 1rem);
+          height: calc(100% + 1rem);
+          content: "";
+          background: #fff;
+          border-radius: 0.5rem 0.5rem 0 0;
+          box-sizing: border-box;
+        }
+      }
+    }
+
+    .tools {
+      margin-left: 2.5rem;
+      display: flex;
+      li {
+        display: flex;
+        border-radius: 50%;
+        margin: 0 0.2rem;
+        line-height: 0;
+        width: 40px;
+        height: 40px;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.2s;
+        &:hover {
+          background: #eee;
+        }
+        img {
+          width: 17px;
+          height: 17px;
+        }
+      }
+    }
+  }
+}
+.menu {
+  position: fixed;
+  width: 30rem;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: auto;
+  z-index: 9000;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: all 0.2s 0s;
+  @at-root .menuHidden {
+    transform: translateX(-470px);
+    visibility: hidden;
+  }
+  .menuTop {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    position: sticky;
+    padding: 1rem 1.875rem;
+    .menuClose {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      transition: all 0.2s;
+      .menuCloseBtn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        background: none;
+        border: none;
+        img {
+          width: 15px;
+          height: 15px;
+        }
+      }
+      &:hover {
+        background: #eee;
+      }
+    }
+    .menuLogo {
+      .menuLogoA {
+        display: flex;
+        align-items: center;
+        img {
+          height: 30px;
+        }
+      }
+    }
+  }
+  .menuContainer {
+    padding: 0 2rem 0 150px;
+    .menuNav {
+      padding: 2rem 0;
+      .menuNavMain {
+        font-size: 2.25rem;
+        letter-spacing: -0.04rem;
+        font-weight: 700;
+        line-height: 1.333333;
+        a {
+          display: block;
+          text-decoration: none;
+          color: #111;
+        }
+        .navMainSmall {
+          font-size: 0.875rem;
+          letter-spacing: 0;
+        }
+        li + li {
+          margin-top: 1.25rem;
+        }
+      }
+      .menuNavAux {
+        padding-top: 2.5rem;
+        font-size: 0.875rem;
+        a {
+          display: block;
+          text-decoration: none;
+          color: #111;
+        }
+        li + li {
+          margin-top: 1.25rem;
+        }
+      }
+    }
+  }
+}
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 0 3.125rem;
+  max-width: 112rem;
+  .mains {
+    margin-bottom: 3.75rem;
+    .event {
+      display: flex;
+      flex-direction: row-reverse;
+      width: 100%;
+      .eventImg {
+        width: 66%;
+        a {
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+      .eventSum {
+        width: 33%;
+        background: #dca940;
+      }
+    }
+  }
+}
