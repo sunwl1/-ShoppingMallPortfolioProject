@@ -228,6 +228,7 @@ header {
   max-width: 112rem;
   .mains {
     margin-bottom: 3.75rem;
+    width: 100%;
     .event {
       display: flex;
       flex-direction: row-reverse;
@@ -244,6 +245,7 @@ header {
       .eventSum {
         width: 33%;
         background: #dca940;
+        flex: 1 1 auto;
       }
     }
   }
