@@ -5,134 +5,155 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="../css/reset.css" />
-    <link rel="stylesheet" href="./main.css" />
+    <link rel="stylesheet" href="../css/main.css" />
   </head>
   <body>
-      <header>
-        <div class="headContainer">
-          <a href="/" class="mainLogo">
-            <img src="../img/logo.svg" alt="메인로고"
-          /></a>
-          <div class="searchBoxContainer">
-            <div class="overlay"></div>
-            <form action="" role="search" class="searchBox">
-              <div class="searchWrapper">
-                <div class="sidebar"><a class="close-icon"></a></div>
-                <div class="searchField">
-                  <input
-                    type="search"
-                    name="q"
-                    maxlength="150"
-                    class="searchFieldInput"
-                    spellcheck="false"
-                    aria-label="제품 및 아이디어, 신제품 검색"
-                    aria-placeholder="제품 및 아이디어, 신제품 검색"
-                    placeholder="검색어 입력"
-                    autocapitalize="off"
-                    autocomplete="off"
-                    autocorrect="off"
-                  />
-                  <button
-                    type="button"
-                    class="visualSearchIcon"
-                    aria-label="이미지로 검색"
-                  >
-                    <img
-                      src="../img/005-photo-camera.svg"
-                      alt="이미지서치 아이콘"
-                    />
-                  </button>
-                  <img
-                    src="../img/loupe.svg"
-                    alt="돋보기 아이콘"
-                    class="loupeIcon"
-                  />
-                </div>
+    <header>
+      <div class="headContainer">
+        <a href="/" class="mainLogo"> <img src="../img/logo.svg" alt="메인로고" /></a>
+        <div class="searchBoxContainer">
+          <div class="overlay"></div>
+          <form action="" role="search" class="searchBox">
+            <div class="searchWrapper">
+              <div class="sidebar"><a class="close-icon"></a></div>
+              <div class="searchField">
+                <input
+                  type="search"
+                  name="q"
+                  maxlength="150"
+                  class="searchFieldInput"
+                  spellcheck="false"
+                  aria-label="제품 및 아이디어, 신제품 검색"
+                  aria-placeholder="제품 및 아이디어, 신제품 검색"
+                  placeholder="검색어 입력"
+                  autocapitalize="off"
+                  autocomplete="off"
+                  autocorrect="off"
+                />
+                <button type="button" class="visualSearchIcon" aria-label="이미지로 검색">
+                  <img src="../img/005-photo-camera.svg" alt="이미지서치 아이콘" />
+                </button>
+                <img src="../img/loupe.svg" alt="돋보기 아이콘" class="loupeIcon" />
               </div>
-              <div class="dropdown"></div>
-            </form>
-          </div>
-          <ul class="tools">
-            <li class="profileBtn">
-              <img src="../img/001-user.svg" alt="마이페이지 아이콘" />
-            </li>
-            <li class="likesBtn">
-              <img
-                src="../img/002-heart-shape-outline.svg"
-                alt="관심목록 아이콘"
-              />
-            </li>
-            <li class="cartBtn">
-              <img src="../img/003-shopping-cart.svg" alt="장바구니 아이콘" />
-            </li>
-            <li class="menuBtn">
-              <img src="../img/004-menu.svg" alt="전체카테고리 아이콘" />
-            </li>
-          </ul>
-        </div>
-      </header>
-      <aside class="menu menuHidden">
-        <div class="menuTop">
-          <div class="menuClose">
-            <button class="menuCloseBtn">
-              <img src="../img/close.svg" alt="메뉴 닫기 버튼" />
-            </button>
-          </div>
-          <div class="menuLogo">
-            <a href="/" class="menuLogoA">
-              <img src="../img/logo.svg" alt="메인로고"
-            /></a>
-          </div>
-        </div>
-        <div class="menuContainer">
-          <nav class="menuNav">
-            <ul class="menuNavMain">
-              <li>
-                <a href="" role="button" data-index="0">모든제품</a>
-              </li>
-              <li>
-                <a href="" role="button" data-index="1">디지털쇼룸</a>
-              </li>
-              <li><a href="" role="button" data-index="2" class="navMainSmall">이달의 혜택</a></li>
-              <li><a href="" role="button" data-index="3" class="navMainSmall">신제품</a></li>
-              <li><a href="" role="button" data-index="4" class="navMainSmall">아이디어</a></li>
-              <li><a href="" role="button" data-index="5" class="navMainSmall">더 낮은 새로운 가격</a></li>
-              <li><a href="" role="button" data-index="6" class="navMainSmall">유용한 정보</a></li>
-            </ul>
-            <ul class="menuNavAux">
-              <li><a href="" role="button" data-index="7" class="navMainSmall">매장안내</a></li>
-              <li><a href="" role="button" data-index="8" class="navMainSmall">IKEA Family</a></li>
-              <li><a href="" role="button" data-index="9" class="navMainSmall">고객지원</a></li>
-              <li><a href="" role="button" data-index="10" class="navMainSmall">배송조회</a></li>
-              <li><a href="" role="button" data-index="11" class="navMainSmall">내 프로필</a></li>
-            </ul>
-          </nav>
-        </div>
-        <div class="menuAlter"></div>
-      </aside>
-      <div class="overlay"></div>
-      <div class="pageContainer">
-        <article class="mainPage">
-          <section class="mains">
-            <div class="event">
-              <div class="eventImg">
-                <a href="" target="_blank">
-                  <img src="../img/event1.webp" alt="이벤트 이미지">
-                </a>
-              </div>
-              <div class="eventSum"></div>
             </div>
-          </section>
-          <section class="mains"></section>
-          <section class="mains"></section>
-          <section class="mains"></section>
-          <section class="mains"></section>
-          <section class="mains"></section>
-          <section class="mains"></section>
-          <section class="mains"></section>
-          <section class="mains"></section>
-        </article>
+            <div class="dropdown"></div>
+          </form>
+        </div>
+        <ul class="tools">
+          <li class="profileBtn">
+            <img src="../img/001-user.svg" alt="마이페이지 아이콘" />
+          </li>
+          <li class="likesBtn">
+            <img src="../img/002-heart-shape-outline.svg" alt="관심목록 아이콘" />
+          </li>
+          <li class="cartBtn">
+            <img src="../img/003-shopping-cart.svg" alt="장바구니 아이콘" />
+          </li>
+          <li class="menuBtn">
+            <img src="../img/004-menu.svg" alt="전체카테고리 아이콘" />
+          </li>
+        </ul>
       </div>
+    </header>
+    <aside class="menu menuHidden">
+      <div class="menuTop">
+        <div class="menuClose">
+          <button class="menuCloseBtn">
+            <img src="../img/close.svg" alt="메뉴 닫기 버튼" />
+          </button>
+        </div>
+        <div class="menuLogo">
+          <a href="/" class="menuLogoA"> <img src="../img/logo.svg" alt="메인로고" /></a>
+        </div>
+      </div>
+      <div class="menuContainer">
+        <nav class="menuNav">
+          <ul class="menuNavMain">
+            <li>
+              <a href="" role="button" data-index="0">모든 제품</a>
+            </li>
+            <li>
+              <a href="" role="button" data-index="1">디지털 쇼룸</a>
+            </li>
+            <li><a href="" role="button" data-index="2" class="navMainSmall">이달의 혜택</a></li>
+            <li><a href="" role="button" data-index="3" class="navMainSmall">신제품</a></li>
+            <li><a href="" role="button" data-index="4" class="navMainSmall">아이디어</a></li>
+            <li><a href="" role="button" data-index="5" class="navMainSmall">더 낮은 새로운 가격</a></li>
+            <li><a href="" role="button" data-index="6" class="navMainSmall">유용한 정보</a></li>
+          </ul>
+          <ul class="menuNavAux">
+            <li><a href="" role="button" data-index="7" class="navMainSmall">매장안내</a></li>
+            <li><a href="" role="button" data-index="8" class="navMainSmall">IKEA Family</a></li>
+            <li><a href="" role="button" data-index="9" class="navMainSmall">고객지원</a></li>
+            <li><a href="" role="button" data-index="10" class="navMainSmall">배송조회</a></li>
+            <li><a href="" role="button" data-index="11" class="navMainSmall">내 프로필</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="menuAlter"></div>
+    </aside>
+    <div class="overlay"></div>
+    <div class="pageContainer">
+      <article class="mainPage">
+        <section class="mains">
+          <div class="event">
+            <div class="eventImg">
+              <a href="" target="_blank">
+                <img src="../img/event1.webp" alt="이벤트 이미지" />
+              </a>
+            </div>
+            <div class="eventSum">
+              <h2>모두를 위한 맛있는 추석 할인 25%</h2>
+              <p>넉넉한 추석을 위한 냄비 및 프라이팬, 식품보관용기, 확장형 테이블을 최대 25% 할인된 가격에 만나보세요.</p>
+              <p>9월 10일부터 10월 6일까지</p>
+              <a href="" role="button">할인 제품 보러가기</a>
+            </div>
+          </div>
+        </section>
+        <section class="mains"></section>
+        <section class="mains">
+          <div class="notice">
+            <h2>배송 지연 안내</h2>
+            <p>코로나19로 인해 택배 주문의 발송이 다소 지연될 수 있습니다. 이점 양해 부탁드리며, 빠른 시일 내에 정상 발송할 수 있도록 노력하겠습니다.</p>
+            <a href="" role="button">코로나19관련 대응책 더 보기</a>
+          </div>
+        </section>
+        <section class="mains">
+          <div class="news">
+            <div class="newsItemContainer">
+              <img src="../img/news1.webp" alt="뉴스 이미지" />
+              <h2>IKEA 카탈로그 2021이 출시되었습니다!</h2>
+              <p>홈퍼니싱 팁과 아이디어로 가득한 올해의 새로운 카탈로그를 지금 만나보세요.</p>
+              <a href="">자세히 보기</a>
+            </div>
+
+            <div class="newsItemContainer">
+              <img src="../img/news2.webp" alt="뉴스 이미지" />
+              <h2>IKEA 플래닝 스튜디오 신도림 오픈</h2>
+              <p>꿈꾸던 공간이 상담으로 실현되는 곳, IKEA 플래닝 스튜디오 신도림이 오픈했습니다! 현대백화점 디큐브시티 B1에서 지금 바로 만나요!</p>
+              <a href="">자세히 보기</a>
+            </div>
+          </div>
+        </section>
+        <section class="mains">
+          <div class="monthly"></div>
+        </section>
+        <section class="mains">
+          <div class="informs">
+            <h2>IKEA 주요 정보</h2>
+            <ul>
+              <li>
+                <img src="../img/inform1.webp" alt="이케아 정보 이미지">
+                <button>2021 카탈로그</button>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="mains"></section>
+        <section class="mains"></section>
+        <section class="mains"></section>
+      </article>
+    </div>
     <script src="./main.js"></script>
   </body>
 </html>

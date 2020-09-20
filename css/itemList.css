@@ -1,0 +1,48 @@
+@charset "UTF-8";
+.itemList { width: 100%; overflow-x: hidden; display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; }
+
+.itemList .items { width: calc((100% / 2) - 1.25rem); padding: 0 0.625rem; margin-top: 0; margin-left: 0.625rem; margin-right: 0.625rem; margin-bottom: 2.5rem; }
+
+@media (min-width: 37.5em) { .itemList .items { width: calc((100% / 3) - 1.25rem); margin-top: 1.25rem; margin-bottom: 3.75rem; } }
+
+@media (min-width: 56.25em) { .itemList .items { width: calc((100% / 4) - 1.25rem); } }
+
+.itemList .items a { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; width: 100%; height: 100%; text-decoration: none; color: #111; position: relative; }
+
+.itemList .items a .Btns { height: 2.5rem; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+
+.itemList .items a .Btns input { display: none; }
+
+.itemList .items a .Btns input:checked + .compBtn::before { content: '√'; color: white; background: #484848; display: block; text-align: center; }
+
+.itemList .items a .Btns .compBtn { width: 1.4rem; height: 1.4rem; border: 1px solid #797979; border-radius: 50%; cursor: pointer; overflow: hidden; }
+
+.itemList .items a .Btns .likeBtn { background: none; border: none; width: 2.5rem; height: 2.5rem; opacity: 0; cursor: pointer; visibility: hidden; -webkit-transition: opacity 0.2s; transition: opacity 0.2s; }
+
+.itemList .items a .Btns .addCartBtn { position: absolute; bottom: 0.5rem; right: 0.5rem; width: 2.5rem; height: 2.5rem; border-radius: 50%; background: #0058a3; border: none; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; cursor: pointer; visibility: hidden; opacity: 0; -webkit-transition: opacity 0.2s; transition: opacity 0.2s; }
+
+.itemList .items a .Btns .addCartBtn .addCartIcon { -ms-flex-negative: 0; flex-shrink: 0; height: 1.5rem; width: 1.5rem; fill: #fff; }
+
+.itemList .items a img { width: 100%; }
+
+.itemList .items a h4 { font-size: 0.875rem; line-height: 1.43; font-weight: 700; text-transform: uppercase; color: #000; margin-bottom: 0.3125rem; }
+
+.itemList .items a p { font-size: 0.875rem; line-height: 1.43; letter-spacing: 0; font-weight: 400; margin-bottom: 0.625rem; }
+
+.itemList .items a p *:last-child::before { content: ', '; }
+
+.itemList .items a .price { margin-bottom: 0.625rem; -ms-flex-wrap: wrap; flex-wrap: wrap; }
+
+.itemList .items a .price span { line-height: 0.9; font-size: 0.6875rem; vertical-align: text-top; margin-right: 0.0625rem; }
+
+.itemList .items a .price span + span { line-height: 0.9; font-size: 1.375rem; vertical-align: inherit; font-weight: 700; color: #000; white-space: pre; }
+
+.itemList .items a .rates .starIcon img { height: 0.875rem; display: inline-block; width: inherit; }
+
+.itemList .items a .rates .starIcon + span { font-size: 0.75rem; line-height: normal; }
+
+.itemList .items a:hover > h4 { text-decoration: underline; }
+
+.itemList .items a:hover .likeBtn { visibility: visible; opacity: 30%; -webkit-transition: opacity 0.2s; transition: opacity 0.2s; }
+
+.itemList .items a:hover .addCartBtn { visibility: visible; opacity: 100%; -webkit-transition: opacity 0.2s; transition: opacity 0.2s; }

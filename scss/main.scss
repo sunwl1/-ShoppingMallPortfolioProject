@@ -1,3 +1,5 @@
+@import '../scss/mixin';
+
 .overlay {
   position: fixed;
   top: 0;
@@ -7,24 +9,40 @@
   display: none;
   cursor: pointer;
   background: rgba(0, 0, 0, 0.3);
+  z-index: 2;
 }
 header {
-  padding: 1.2rem 3rem;
+  padding: 1.25rem;
+  @include v-large {
+    padding: 1.2rem 3rem;
+  }
   .headContainer {
     max-width: 112rem;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    @include v-large {
+      flex-wrap: nowrap;
+    }
 
     .mainLogo {
       flex-grow: 0;
+      order: 1;
     }
 
     .searchBoxContainer {
-      min-width: auto;
       flex-grow: 1;
-      margin-left: 2.5rem;
+      order: 4;
+      min-width: 100%;
+      margin-top: 0.9375rem;
+      @include v-large {
+        min-width: auto;
+        margin-left: 2.5rem;
+        margin-top: 0;
+        order: 2;
+      }
       .searchBox {
         position: relative;
         .searchWrapper {
@@ -96,7 +114,7 @@ header {
           display: block;
           width: calc(100% + 1rem);
           height: calc(100% + 1rem);
-          content: "";
+          content: '';
           background: #fff;
           border-radius: 0.5rem 0.5rem 0 0;
           box-sizing: border-box;
@@ -105,8 +123,13 @@ header {
     }
 
     .tools {
-      margin-left: 2.5rem;
       display: flex;
+      margin-left: auto;
+      margin-right: -0.625rem;
+      order: 3;
+      @include v-large {
+        margin-left: 2.5rem;
+      }
       li {
         display: flex;
         border-radius: 50%;
@@ -130,7 +153,7 @@ header {
 }
 .menu {
   position: fixed;
-  width: 30rem;
+  width: 100%;
   top: 0;
   bottom: 0;
   left: 0;
@@ -142,6 +165,9 @@ header {
   overflow-y: auto;
   overflow-x: hidden;
   transition: all 0.2s 0s;
+  @include v-large {
+    width: 30rem;
+  }
   @at-root .menuHidden {
     transform: translateX(-470px);
     visibility: hidden;
@@ -149,14 +175,22 @@ header {
   .menuTop {
     display: flex;
     flex-shrink: 0;
+    justify-content: space-between;
     align-items: center;
     position: sticky;
-    padding: 1rem 1.875rem;
+    padding: 0.8rem 1.25rem;
+    @include v-large {
+      padding: 1rem 1.875rem;
+    }
     .menuClose {
       width: 40px;
       height: 40px;
       border-radius: 50%;
       transition: all 0.2s;
+      order: 2;
+      @include v-large {
+        order: 1;
+      }
       .menuCloseBtn {
         display: flex;
         justify-content: center;
@@ -175,6 +209,10 @@ header {
       }
     }
     .menuLogo {
+      order: 1;
+      @include v-large {
+        order: 2;
+      }
       .menuLogoA {
         display: flex;
         align-items: center;
@@ -185,14 +223,20 @@ header {
     }
   }
   .menuContainer {
-    padding: 0 2rem 0 150px;
+    padding: 1.75rem 1.25rem;
+    @include v-large {
+      padding: 0 2rem 0 150px;
+    }
     .menuNav {
-      padding: 2rem 0;
+      padding: 0.5rem 0;
       .menuNavMain {
-        font-size: 2.25rem;
+        font-size: 1.5rem;
         letter-spacing: -0.04rem;
         font-weight: 700;
         line-height: 1.333333;
+        @include v-large {
+          font-size: 2.25rem;
+        }
         a {
           display: block;
           text-decoration: none;
@@ -224,17 +268,25 @@ header {
 .pageContainer {
   display: flex;
   flex-direction: column;
-  padding: 0 3.125rem;
+  padding: 0 1.25rem;
   max-width: 112rem;
+  @include v-large {
+    padding: 0 3.125rem;
+  }
   .mains {
     margin-bottom: 3.75rem;
     width: 100%;
     .event {
       display: flex;
-      flex-direction: row-reverse;
+      flex-direction: column;
       width: 100%;
+      @include v-large {
+        flex-direction: row-reverse;
+      }
       .eventImg {
-        width: 66%;
+        @include v-large {
+          width: 66%;
+        }
         a {
           img {
             width: 100%;
@@ -243,9 +295,96 @@ header {
         }
       }
       .eventSum {
-        width: 33%;
+        padding: 3.125rem;
         background: #dca940;
         flex: 1 1 auto;
+        @include v-large {
+          width: 33%;
+        }
+        h2 {
+          @include artiH2(#fff);
+        }
+        p {
+          color: #fff;
+          margin-bottom: 0.625rem;
+          & + p {
+            margin-bottom: 0.5rem;
+          }
+        }
+        a {
+          @include artiBtn(#fff);
+        }
+      }
+    }
+    .notice {
+      background: #f3ece2;
+      padding: 2.5rem;
+      padding-bottom: 60px;
+      h2 {
+        @include artiH2;
+      }
+      p {
+        margin-bottom: 1.875rem;
+      }
+      a {
+        @include artiBtn(#111, #fff);
+      }
+    }
+    .news {
+      display: flex;
+      flex-wrap: wrap;
+      margin: calc(0.625rem * -1);
+      @include v-large {
+        margin: calc(0.9375rem * -1);
+      }
+      .newsItemContainer {
+        display: flex;
+        flex-direction: column;
+        flex-basis: calc(100% - 0.625rem * 2);
+        margin: 0.625rem;
+        flex-grow: 0;
+        width: 100%;
+        @include v-large {
+          flex-basis: calc(49.9% - 0.9375rem * 2);
+        }
+        img {
+          width: 100%;
+          margin-bottom: 0.9375rem;
+        }
+        h2 {
+          @include artiH2;
+          word-break: break-word;
+          font-size: 1.5rem;
+          font-weight: bold;
+          @include v-large {
+            font-size: 2.25rem;
+          }
+        }
+        p {
+          margin-bottom: 1rem;
+        }
+        a {
+          @include artiBtn(#111, #fff);
+        }
+      }
+    }
+    .informs {
+      h2 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.33;
+        color: #111;
+        margin-bottom: 2.5rem;
+      }
+      ul {
+        li {
+          display: flex;
+          flex-direction: column;
+          img{
+            width: 100%;
+            
+          }
+        }
       }
     }
   }

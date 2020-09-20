@@ -1,0 +1,159 @@
+@import '../scss/mixin';
+
+.itemList {
+  width: 100%;
+  overflow-x: hidden;
+  display: flex;
+  flex-wrap: wrap;
+
+  .items {
+    width: calc((100% / 2) - 1.25rem);
+    padding: 0 0.625rem;
+    margin-top: 0;
+    margin-left: 0.625rem;
+    margin-right: 0.625rem;
+    margin-bottom: 2.5rem;
+    @include v-medium {
+      width: calc((100% / 3) - 1.25rem);
+      margin-top: 1.25rem;
+      margin-bottom: 3.75rem;
+    }
+    @include v-large {
+      width: calc((100% / 4) - 1.25rem);
+    }
+    a {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      text-decoration: none;
+      color: #111;
+      position: relative;
+      .Btns {
+        height: 2.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        input {
+          display: none;
+          &:checked + .compBtn::before {
+            content: '√';
+            color: white;
+            background: #484848;
+            display: block;
+            text-align: center;
+          }
+        }
+        .compBtn {
+          width: 1.4rem;
+          height: 1.4rem;
+          border: 1px solid #797979;
+          border-radius: 50%;
+          cursor: pointer;
+          overflow: hidden;
+        }
+        .likeBtn {
+          background: none;
+          border: none;
+          width: 2.5rem;
+          height: 2.5rem;
+          opacity: 0;
+          cursor: pointer;
+          visibility: hidden;
+          transition: opacity 0.2s;
+        }
+        .addCartBtn {
+          position: absolute;
+          bottom: 0.5rem;
+          right: 0.5rem;
+          width: 2.5rem;
+          height: 2.5rem;
+          border-radius: 50%;
+          background: #0058a3;
+          border: none;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+          visibility: hidden;
+          opacity: 0;
+          transition: opacity 0.2s;
+          .addCartIcon {
+            flex-shrink: 0;
+            height: 1.5rem;
+            width: 1.5rem;
+            fill: #fff;
+          }
+        }
+      }
+      img {
+        width: 100%;
+      }
+      h4 {
+        font-size: 0.875rem;
+        line-height: 1.43;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #000;
+        margin-bottom: 0.3125rem;
+      }
+      p {
+        font-size: 0.875rem;
+        line-height: 1.43;
+        letter-spacing: 0;
+        font-weight: 400;
+        margin-bottom: 0.625rem;
+        *:last-child {
+          &::before {
+            content: ', ';
+          }
+        }
+      }
+      .price {
+        margin-bottom: 0.625rem;
+        flex-wrap: wrap;
+        span {
+          line-height: 0.9;
+          font-size: 0.6875rem;
+          vertical-align: text-top;
+          margin-right: 0.0625rem;
+        }
+        span + span {
+          line-height: 0.9;
+          font-size: 1.375rem;
+          vertical-align: inherit;
+          font-weight: 700;
+          color: #000;
+          white-space: pre;
+        }
+      }
+      .rates {
+        .starIcon {
+          img {
+            height: 0.875rem;
+            display: inline-block;
+            width: inherit;
+          }
+          & + span {
+            font-size: 0.75rem;
+            line-height: normal;
+          }
+        }
+      }
+      &:hover > h4 {
+        text-decoration: underline;
+      }
+      &:hover .likeBtn {
+        visibility: visible;
+        opacity: 30%;
+        transition: opacity 0.2s;
+      }
+      &:hover .addCartBtn {
+        visibility: visible;
+        opacity: 100%;
+        transition: opacity 0.2s;
+      }
+    }
+  }
+}
