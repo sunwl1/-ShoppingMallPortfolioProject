@@ -1,4 +1,4 @@
-@import '../scss/mixin';
+@import "../scss/mixin";
 
 .overlay {
   position: fixed;
@@ -26,12 +26,10 @@ header {
     @include v-large {
       flex-wrap: nowrap;
     }
-
     .mainLogo {
       flex-grow: 0;
       order: 1;
     }
-
     .searchBoxContainer {
       flex-grow: 1;
       order: 4;
@@ -114,7 +112,7 @@ header {
           display: block;
           width: calc(100% + 1rem);
           height: calc(100% + 1rem);
-          content: '';
+          content: "";
           background: #fff;
           border-radius: 0.5rem 0.5rem 0 0;
           box-sizing: border-box;
@@ -380,9 +378,8 @@ header {
         li {
           display: flex;
           flex-direction: column;
-          img{
+          img {
             width: 100%;
-            
           }
         }
       }

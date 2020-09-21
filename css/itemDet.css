@@ -1,0 +1,19 @@
+.wrapper { display: -webkit-box; display: -ms-flexbox; display: flex; max-width: 112rem; margin: 0 auto; padding: 0 1.25rem; -webkit-box-sizing: border-box; box-sizing: border-box; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
+
+.wrapper .locaNav { height: 80px; margin-bottom: 3.75rem; border-bottom: 1px solid #dfdfdf; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+
+.wrapper .itemContainer { display: -ms-grid; display: grid; -ms-grid-columns: (minmax(0, 1fr))[4]; grid-template-columns: repeat(4, minmax(0, 1fr)); grid-column-gap: 0.625rem; }
+
+.wrapper .itemContainer .itemImg { position: relative; -webkit-box-ordinal-group: 1; -ms-flex-order: 0; order: 0; margin: 0 -1.25rem; -ms-grid-column: 1; grid-column-start: 1; grid-column-end: 4; }
+
+.wrapper .itemContainer .itemImg .itemImgContainer { -ms-scroll-snap-type: x mandatory; scroll-snap-type: x mandatory; display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: nowrap; flex-wrap: nowrap; overflow-x: scroll; overflow-y: hidden; width: 100%; margin: 0; }
+
+.wrapper .itemContainer .itemImg .itemImgContainer .imgPageNumb { font-weight: 700; width: 45px; height: 38px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; background: #f5f5f5; position: absolute; top: 1.25rem; z-index: 200; right: 1.25rem; overflow: hidden; }
+
+.wrapper .itemContainer .itemImg .itemImgContainer .imgContainerEach { scroll-snap-align: start; scroll-snap-stop: always; width: 100%; height: auto; display: block; margin: 0; -webkit-box-flex: 0; -ms-flex: none; flex: none; }
+
+.wrapper .itemContainer .itemImg .itemImgContainer .imgContainerEach .itemImage { -o-object-fit: cover; object-fit: cover; width: 100%; height: 100%; position: absolute; left: 0; top: 0; color: transparent; }
+
+.wrapper .itemContainer .itemDetail { -webkit-box-ordinal-group: 3; -ms-flex-order: 2; order: 2; -ms-grid-column: 1; grid-column-start: 1; grid-column-end: 4; }
+
+.wrapper .itemContainer .itemDetailHead { -webkit-box-ordinal-group: 2; -ms-flex-order: 1; order: 1; -ms-grid-column: 1; grid-column-start: 1; grid-column-end: 4; margin: 0; }

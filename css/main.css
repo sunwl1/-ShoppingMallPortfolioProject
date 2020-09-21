@@ -32,7 +32,7 @@ header .headContainer .searchBoxContainer .searchBox .searchWrapper .searchField
 
 header .headContainer .searchBoxContainer .searchBox .dropdown { display: none; min-height: auto; border-radius: 0 0 0.5rem 0.5rem; left: -0.5rem; width: calc(100% + 1rem); padding: 1rem 0; position: absolute; height: 300px; background: #fff; }
 
-header .headContainer .searchBoxContainer .searchBox .searchBoxFx::before { position: absolute; top: -0.5rem; right: -0.5rem; bottom: -0.5rem; left: -0.5rem; display: block; width: calc(100% + 1rem); height: calc(100% + 1rem); content: ''; background: #fff; border-radius: 0.5rem 0.5rem 0 0; -webkit-box-sizing: border-box; box-sizing: border-box; }
+header .headContainer .searchBoxContainer .searchBox .searchBoxFx::before { position: absolute; top: -0.5rem; right: -0.5rem; bottom: -0.5rem; left: -0.5rem; display: block; width: calc(100% + 1rem); height: calc(100% + 1rem); content: ""; background: #fff; border-radius: 0.5rem 0.5rem 0 0; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 header .headContainer .tools { display: -webkit-box; display: -ms-flexbox; display: flex; margin-left: auto; margin-right: -0.625rem; -webkit-box-ordinal-group: 4; -ms-flex-order: 3; order: 3; }
 
