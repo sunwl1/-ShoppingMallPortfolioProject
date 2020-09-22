@@ -1,132 +1,133 @@
 
-// class Container {
-//     constructor(link, imgSrc){
-//         let createContainer = document.createElement('div');
-//         createContainer.style.width = '500px';
-//         createContainer.style.height = '500px';
-//         createContainer.style.position = 'relative';
-//         let createContainerBox = document.createElement('div');
-//         createContainerBox.id = 'container-circle';
-//         createContainerBox.style.width ='100%';
-//         createContainerBox.style.height ='100%';
-//         createContainerBox.onmouseover = () => {showCircle(); };
-//         createContainerBox.onmouseout = () => {deleteCircle(); };
-//         let img = document.createElement('img');
-//         img.src = imgSrc;
-//         img.style.width = '100%';
-//         img.style.height = '100%';
-//         let linkSrc = document.createElement('a')
-//         linkSrc.href = link;
-//         linkSrc.style.width = '100%';
-//         linkSrc.style.height = '100%';
-        
-//         createContainerBox.appendChild(img);
-//         linkSrc.appendChild(createContainerBox);
-//         createContainer.appendChild(linkSrc);
-//         document.body.appendChild(createContainer);
-       
-//     }
-//    createCir(n, src, tops, left) {
-//        for(let i =0; i < n;i++){
-//         let circleSrc = document.createElement('a');
-//         circleSrc.className = 'circle'
-//         circleSrc.href = src[i];
-        
-//         let box = document.getElementById('container-circle');
-//         let createParentCircle = document.createElement('div');
-//         createParentCircle.className = 'parentCircle';
-//         createParentCircle.style.position = 'absolute';
-//         createParentCircle.style.visibility = 'visible';
-//         createParentCircle.style.top = tops[i];
-//         createParentCircle.style.left = left[i]; 
-//         createParentCircle.onmouseover = () => {inTransCircle(i) };
-//         createParentCircle.onmouseout = () => {outTransCircle(i) };
-        
-//         let createChlidCircle = document.createElement('div');
-//         createChlidCircle.className = 'chlidCircle';
-        
-//         createParentCircle.appendChild(createChlidCircle);
-//         circleSrc.appendChild(createParentCircle);
-//         box.appendChild(circleSrc);
-//        }
-//     }
-//     createArrowBox(name, sub, price) {
-//         let circleLength = document.getElementsByClassName('circle')
-//         for (let i = 0; i < circleLength.length; i++) {
-//             let infoBoxLink = document.getElementById('circle')
-//             let infoBox = document.createElement('div');
-//             infoBox.className = 'arrow_box';
-//             let itemName = document.createElement('h2');
-//             itemName.innerHTML = name[i];
-//             let itemSubInfo = document.createElement('h4');
-//             itemSubInfo.innerHTML = sub[i];
-//             let itemPrice = document.createElement('p');
-//             itemPrice.innerHTML = price[i];
+function showCircle(element, isVisible) {
+    const children = element.getElementsByClassName('parentCircle');
+    for (const i of children) {
+        i.querySelector('.chlidCircle').style.transition = null;
+        if (isVisible) i.style.visibility = 'visible';
+        else i.style.visibility = 'hidden';
+    }
+}
+
+function inTransCir(element, isTrans) {
+    const chlidCir = element.querySelector('.chlidCircle')
+    if(isTrans) {
+        element.style.width = '44px';
+        element.style.height = '44px';
+        element.style.border = '5px solid rgba(255,255,255,0.5)';
     
-//             infoBox.appendChild(itemName);
-//             infoBox.appendChild(itemSubInfo);
-//             infoBox.appendChild(itemPrice);
-//             infoBoxLink[i].appendChlid(infoBox);
-            
-            
-//         }
-     
-//     }
-// }
+        chlidCir.style.width = '15px';
+        chlidCir.style.height = '15px';
 
-// let first = new Container('https://www.naver.com/',"./라이언 이미지.png")
-//     .createCir(3,Pinterest.firstSrc,Pinterest.posArr.tops,Pinterest.posArr.left)
-//     .createArrowBox('가나다','라마바사','1600원');
+        chlidCir.style.transition = '0.25s 0.25s ease-in-out';
+    } else {
+        element.style.width = '50px';
+        element.style.height = '50px';
+        element.style.border = 'none';
     
+        chlidCir.style.width = '20px';
+        chlidCir.style.height = '20px';
+        chlidCir.style.transition = '0.3s 0.3s ease-in-out';
+    }
+}
 
-// function showCircle() {
-//     let showParentCircle = document.getElementsByClassName('parentCircle');
-//     let showChlidCircle = document.getElementsByClassName('chlidCircle');
-//     for(let i =0;i <showParentCircle.length; i++){
-//         showParentCircle[i].style.visibility = 'visible';
-//         showChlidCircle[i].style.visibility = 'visible';
-//     }
-    
+
+function Contaierbox(state) {
+    // const imgState = state;
+    for (const i in state) {
+
+        const linkBox = document.createElement('a');
+        const linkImg = document.createElement('img');
+        const linkDiv = document.createElement('div');
+
+        linkBox.appendChild(linkImg);
+        linkDiv.appendChild(linkBox);
+        document.body.appendChild(linkDiv);
+
+        linkBox.id = 'imgLinkBox';
+        linkBox.href =`${state.linkSrc}`;
+        // linkBox.onmouseenter = () => { showCircle(linkBox, true); };
+        // linkBox.onmouseleave = () => { showCircle(linkBox, false); };
+
+        linkBox.className = 'imgLinkBoxClass';
+        linkDiv.style.width = `${state.width}px`;
+        linkDiv.style.height =`${state.height}px`;
+        linkDiv.style.position = 'absolute';
+        linkDiv.style.top = `${state.top}px`;
+        linkDiv.style.left =`${state.left}px`;
+
+        linkImg.src = `${state.imgSrc}`;
+        linkImg.style.width = '100%';
+        linkImg.style.height = '100%';
+
+    };
+
+}
+
+Contaierbox(imageState);
+
+// function createCir(arrPosition, element) {
+//     arrPosition.forEach( () => {
+//         const circleSrc = document.createElement('a');
+//         const circle = document.createElement('div');
+//         const circleChild = document.createElement('div');
+//         circle.appendChild(circleChild);
+//         circle.appendChild(circleSrc);
+//         element.appendChild(circle);
+
+//         circleSrc.href = arrPosition.href;
+//         circle.id = 'idParentCircle';
+//         circle.className = 'parentCircle';
+//         circle.style.position = 'absolute';
+//         circle.style.visibility = 'visible';
+//         circle.style.top = arrPosition.top;
+//         circle.style.left = arrPosition.left;
+//         // circle.onmouseover = () => { inTransCir(circle, true); };
+//         // circle.onmouseout = () => { inTransCir(circle, false); };
+
+//         circleChild.className = 'chlidCircle';
+
+//     });
+// }
+// createCir(imageState.innerCircle, document.getElementById('imgLinkBox'));
+
+
+// function createArrowBox(element, name, info, price) {
+//     const arrowBox = document.createElement('div');
+//     const itemName = document.createElement('h2');
+//     const itemInfo = document.createElement('p');
+//     const itemPrice = document.createElement('p');
+//     const arrowIcon = document.createElement('p');
+
+//     arrowBox.appendChild(itemName);
+//     arrowBox.appendChild(itemInfo);
+//     arrowBox.appendChild(itemPrice);
+//     arrowBox.appendChild(arrowIcon);
+//     element.appendChild(arrowBox);
+
+//     arrowBox.className = 'arrow_box';
+//     arrowBox.style.position = 'absolute';
+//     arrowBox.style.bottom = '70px';
+//     arrowBox.style.width = '100px';
+//     arrowBox.style.height = '80px';
+//     arrowBox.style.left = '-27px';
+
+//     itemName.innerHTML = name;
+//     itemName.style.width = '70px';
+//     itemName.style.padding = '5px 5px 5px 4px';
+//     itemInfo.innerHTML = info;
+//     itemInfo.style.width = '70px';
+//     itemInfo.style.padding = '5px 5px 5px 4px';
+//     itemPrice.innerHTML = price;
+//     itemPrice.style.width = '70px';
+//     itemPrice.style.padding = '5px 5px 5px 4px';
+//     arrowIcon.innerHTML = '&gt;';
+//     arrowIcon.style.position = 'absolute';
+//     arrowIcon.style.left = '80px';
+//     arrowIcon.style.top = '0px';
+
+
 // }
 
-// function deleteCircle() {
-//     let deleteShowParentCircle = document.getElementsByClassName('parentCircle');
-//     let deleteShowChlidCircle = document.getElementsByClassName('chlidCircle');
-//     for(let i =0;i <deleteShowParentCircle.length; i++){
-//         deleteShowParentCircle[i].style.visibility = 'hidden';
-//         deleteShowChlidCircle[i].style.visibility = 'hidden';
-//         deleteShowChlidCircle[i].style.transition = 'all ease-in-out';     
-//     }
-    
-// }
-
-// function inTransCircle(index) {
-//     let inTransParentCircle = document.getElementsByClassName('parentCircle');
-//     let outTrnasChlidCircle = document.getElementsByClassName('chlidCircle');
-//     for (let i = 0; i < inTransParentCircle.length; i++) {
-//         inTransParentCircle[i].style.visibility = 'visible';
-//         outTrnasChlidCircle[i].style.visibility = 'visible';
-//     }
-//     inTransParentCircle[index].style.width = '44px';
-//     inTransParentCircle[index].style.height = '44px';
-//     inTransParentCircle[index].style.border = '5px solid rgba(255,255,255,0.5)';
-      
-//     outTrnasChlidCircle[index].style.width = '15px';
-//     outTrnasChlidCircle[index].style.height = '15px';
-//     outTrnasChlidCircle[index].style.transition = '0.25s 0.25s ease-in-out';
-// }
-
-// function outTransCircle(index) {
-//     let outTransParentCircle = document.getElementsByClassName('parentCircle');
-//     let outTransChlidCircle = document.getElementsByClassName('chlidCircle');
-//     outTransParentCircle[index].style.visibility = 'visible';
-//     outTransParentCircle[index].style.width = '50px';
-//     outTransParentCircle[index].style.height = '50px';
-//     outTransParentCircle[index].style.border = 'none';
-//     outTransChlidCircle[index].style.visibility = 'visible';
-//     outTransChlidCircle[index].style.width = '20px';
-//     outTransChlidCircle[index].style.height = '20px';
-//     outTransChlidCircle[index].style.transition = '0.3s 0.3s ease-in-out';
-// }
+// createArrowBox(document.querySelector('.parentCircle'), '가나다라', '마바사', '123123');
 
 

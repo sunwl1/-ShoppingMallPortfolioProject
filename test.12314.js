@@ -6,12 +6,7 @@ function showCircle(element, isVisible) {
         else i.style.visibility = 'hidden';
     }
 
-    // let ShowParentCircle = document.getElementsByClassName('parentCircle');
-    // let ShowChlidCircle = document.getElementsByClassName('chlidCircle');
-    // for (let i = 0; i < ShowParentCircle.length; i++) {
-    //     ShowParentCircle[i].style.visibility = 'visible'
-    //     ShowChlidCircle[i].style.visibility = 'visible'
-    // }
+  
 }
 
 function inTrnasCircle(element, isTrans) {
@@ -36,51 +31,10 @@ function inTrnasCircle(element, isTrans) {
 }
 
 
-// function inTransSecondCircle() {
-//     let inTransSecondParentCircle = document.getElementById('secondCircle');
-//     let inTrnasSecondChlidCircle = document.getElementById('secondChlidCircle');
-//     inTransSecondParentCircle.style.width = '44px';
-//     inTransSecondParentCircle.style.height = '44px';
-//     inTransSecondParentCircle.style.border = '5px solid rgba(255,255,255,0.5)';
-//     inTrnasSecondChlidCircle.style.width = '15px';
-//     inTrnasSecondChlidCircle.style.height = '15px';
-//     inTrnasSecondChlidCircle.style.transition = '0.25s 0.25s ease-in-out';
-// }
-
-// function outTransSecondCircle() {
-//     let outTransParentCircle = document.getElementById('secondCircle');
-//     let outTrnasChlidCircle = document.getElementById('secondChlidCircle');
-//     outTransParentCircle.style.visibility = 'visible';
-//     outTransParentCircle.style.width = '50px';
-//     outTransParentCircle.style.height = '50px';
-//     outTransParentCircle.style.border = 'none';
-//     outTrnasChlidCircle.style.visibility = 'visible';
-//     outTrnasChlidCircle.style.width = '20px';
-//     outTrnasChlidCircle.style.height = '20px';
-//     outTrnasChlidCircle.style.transition = '0.3s 0.3s ease-in-out';
-// }
 
 
 function Contaierbox(link, imgSrc){
-    // let createContainer = document.createElement('div');
-    // createContainer.style.top = '100px';
-    // createContainer.style.left = '100px';
-    // createContainer.style.width = '500px';
-    // createContainer.style.height = '500px';
-    // createContainer.style.position = 'relative';
-    // let img = document.createElement('img');
-    // img.src = imgSrc;
-    // img.style.width = '100%';
-    // img.style.height = '100%';
-
-    // let linkSrc = document.createElement('a');
-    // linkSrc.href = link;
-    // linkSrc.style.width = '100%';
-    // linkSrc.style.height = '100%';
-
-    // linkSrc.appendChild(img);
-    // createContainer.appendChild(linkSrc);
-    // document.body.appendChild(createContainer);
+   
 
     const linkBox = document.createElement('a');
     const linkImg = document.createElement('img');
@@ -109,7 +63,8 @@ function Contaierbox(link, imgSrc){
 Contaierbox('#','라이언 이미지.png')
 
 function createCir(arrPosition, element) {
-    arrPosition.forEach(e => {
+    arrPosition.forEach(e => {   //몰라 확실히
+        
         const circle = document.createElement('div');
         const circleChild = document.createElement('div');
         element.appendChild(circle);
@@ -126,89 +81,7 @@ function createCir(arrPosition, element) {
         circleChild.className = 'chlidCircle';
     });
 
-    // let box = document.getElementById('container-circle');
-    // let createFirstParentCircle = document.createElement('div');
-    // createFirstParentCircle.className = 'parentCircle';
-    // createFirstParentCircle.id = 'firstCircle'
-    // createFirstParentCircle.style.position = 'absolute';
-    // createFirstParentCircle.style.visibility = 'hidden';
-    // createFirstParentCircle.style.top = tops;
-    // createFirstParentCircle.style.left = left; 
-    
-    
-    // let createFirstChlidCircle = document.createElement('div');
-    // createFirstChlidCircle.className = 'chlidCircle';
-    // createFirstChlidCircle.id = 'firstChlidCircle';
-    
-    // createFirstParentCircle.appendChild(createFirstChlidCircle);
-    // box.appendChild(createFirstParentCircle);
+ 
 }
 
 createCir([[0, 0], [30, 30], [100, 50]], document.getElementById('imgLinkBox'));
-
-// function createCirSecond(tops, left) {
-//     let box = document.getElementById('container-circle');
-//     let createSecondParentCircle = document.createElement('div');
-//     createSecondParentCircle.className = 'parentCircle';
-//     createSecondParentCircle.id = 'secondCircle'
-//     createSecondParentCircle.style.position = 'relative';
-//     createSecondParentCircle.style.visibility = 'hidden';
-//     createSecondParentCircle.style.top = tops;
-//     createSecondParentCircle.style.left = left; 
-//     createSecondParentCircle.onmouseenter = () => {inTransSecondCircle() };
-//     createSecondParentCircle.onmouseout = () => {outTransSecondCircle() };
-    
-//     let createSecondChlidCircle = document.createElement('div');
-//     createSecondChlidCircle.id = 'secondChlidCircle';
-//     createSecondChlidCircle.className = 'chlidCircle';
-//     createSecondChlidCircle.onmouseenter = () => {inTransSecondCircle() };
-//     createSecondChlidCircle.onmouseout = () => {outTransSecondCircle() };
-    
-//     createSecondParentCircle.appendChild(createSecondChlidCircle);
-//     box.appendChild(createSecondParentCircle);
-// }
-
-// createCirSecond('100px','100px');
-
-// function inTransSecondCircle() {
-//     let inTransSecondParentCircle = document.getElementById('secondCircle');
-//     let inTrnasSecondChlidCircle = document.getElementById('secondChlidCircle');
-//     inTransSecondParentCircle.style.width = '44px';
-//     inTransSecondParentCircle.style.height = '44px';
-//     inTransSecondParentCircle.style.border = '5px solid rgba(255,255,255,0.5)';
-//     inTrnasSecondChlidCircle.style.width = '15px';
-//     inTrnasSecondChlidCircle.style.height = '15px';
-//     inTrnasSecondChlidCircle.style.transition = '0.25s 0.25s ease-in-out';
-// }
-
-
-// function outTransSecondCircle() {
-//     let outTransParentCircle = document.getElementById('secondCircle');
-//     let outTrnasChlidCircle = document.getElementById('secondChlidCircle');
-//     outTransParentCircle.style.visibility = 'visible';
-//     outTransParentCircle.style.width = '50px';
-//     outTransParentCircle.style.height = '50px';
-//     outTransParentCircle.style.border = 'none';
-//     outTrnasChlidCircle.style.visibility = 'visible';
-//     outTrnasChlidCircle.style.width = '20px';
-//     outTrnasChlidCircle.style.height = '20px';
-//     outTrnasChlidCircle.style.transition = '0.3s 0.3s ease-in-out';
-// }
-// function showCircle() {
-//     let ShowParentCircle = document.getElementsByClassName('parentCircle');
-//     let ShowChlidCircle = document.getElementsByClassName('chlidCircle');
-//     for (let i = 0; i < ShowParentCircle.length; i++) {
-//         ShowParentCircle[i].style.visibility = 'visible'
-//         ShowChlidCircle[i].style.visibility = 'visible'
-//     }
-   
-// }
-
-// function deleteCircle() {
-//     let deleteShowParentCircle = document.getElementsByClassName('parentCircle');
-//     let deleteShowChlidCircle = document.getElementsByClassName('chlidCircle');
-
-
-    
-// }
-// //클래스로만 지우기
