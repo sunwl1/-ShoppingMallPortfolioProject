@@ -60,9 +60,9 @@ document.querySelector('.menuBackBtn').addEventListener('click', () => {
 let arrAccor = document.querySelectorAll('.accordionBtn');
 for (let i = 0; i < arrAccor.length; i++) {
     arrAccor[i].addEventListener('click', ()=>{
-        arrAccor[i].parentNode.nextElementSibling.classList.add('accoItemActive');
-        arrAccor[i].parentNode.parentNode.classList.add('itemActive');
-
+        arrAccor[i].parentNode.nextElementSibling.classList.toggle('accoItemActive');
+        arrAccor[i].parentNode.parentNode.classList.toggle('itemActive');
+        arrAccor[i].querySelector('.svgIcon').classList.toggle('svgIconRot');
     })
     
 }

@@ -445,6 +445,10 @@ header {
    }
   }
   .informs {
+    margin: calc(0.625rem * -1);
+   @include v-medium {
+    margin: calc(0.9375rem * -1);
+   }
    h2 {
     font-size: 1.5rem;
     font-weight: bold;
@@ -452,12 +456,31 @@ header {
     color: #111;
     margin-bottom: 2.5rem;
    }
-   ul {
-    li {
+   .infoList {
+    display: flex;
+    flex-wrap: wrap;
+    margin: calc(.9375rem * -1);
+    .infoItem {
+     flex-basis: calc(100% - .625rem * 2);
      display: flex;
      flex-direction: column;
+     margin: .9375rem;
+     @include v-medium{
+         flex-basis: calc(49.9% - .9375rem * 2);
+     }
+     @include v-large{
+         flex-basis: calc(33% - 1.25rem * 2);
+     }
      img {
       width: 100%;
+     }
+     button {
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      margin-top: 0.75rem;
+      background: #fff;
+      @include artiBtn(#222, #fff);
      }
     }
    }
@@ -490,6 +513,10 @@ header {
      }
      p {
       margin-bottom: 0.9375rem;
+      a {
+       text-decoration: underline;
+       color: inherit;
+      }
      }
     }
     .linkGroups {
@@ -522,6 +549,7 @@ header {
         border: none;
         text-align: left;
         width: 100%;
+        background: transparent;
         .accoTitle {
          flex: 1 0 auto;
          margin: 0;
@@ -536,6 +564,12 @@ header {
          height: 1.5rem;
          width: 1.5rem;
          fill: #111;
+         transform: rotate(180deg);
+         transition: transform 0.3s;
+        }
+        .svgIconRot {
+         transform: rotate(360deg);
+         transition: transform 0.3s;
         }
        }
       }
@@ -566,6 +600,153 @@ header {
      }
      .itemActive {
       overflow: visible;
+     }
+    }
+    .snsLinkArea {
+     margin-bottom: 1.875rem;
+     .snsLinkList {
+      margin-bottom: -0.625rem;
+      .snsLinkItem {
+       margin-right: 0.625rem;
+       margin-bottom: 0.625rem;
+       display: inline-block;
+       .snsLink {
+        border: 0.0625rem solid #dfdfdf;
+        padding: 0.3125rem;
+        height: auto;
+        text-decoration: none;
+        border-radius: 40px;
+        position: relative;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 100ms cubic-bezier(0.4, 0, 0.4, 1);
+        cursor: pointer;
+        &:hover {
+         border-color: #686868;
+        }
+
+        .svgIcon {
+         color: #484848;
+         display: inline-block;
+         height: 1.5rem;
+         width: 1.5rem;
+         fill: currentColor;
+         transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+        }
+       }
+      }
+     }
+    }
+    .langArea {
+     margin-bottom: 1.875rem;
+     display: flex;
+     align-items: center;
+     .countrySelector {
+      margin: 0 0.625rem 0 0;
+      display: inline-block;
+      width: auto;
+      .changeCountry {
+       display: inline-block;
+       color: #484848;
+       padding: 0.625rem 1.25rem 0.625rem 2.5rem;
+       border-radius: 40px;
+       border: 1px solid #dfdfdf;
+       font-size: 0.75rem;
+       font-weight: 700;
+       line-height: 1.5;
+       white-space: nowrap;
+       transition: all 100ms cubic-bezier(0.4, 0, 0.4, 1);
+       vertical-align: top;
+       text-decoration: none;
+       position: relative;
+       &:hover {
+        border-color: #686868;
+       }
+       .svgIcon {
+        display: inline-block;
+        height: 1.5rem;
+        width: 1.5rem;
+        fill: currentColor;
+        transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+        position: absolute;
+        left: 0.75rem;
+        top: 0.4375rem;
+       }
+      }
+     }
+     .langSelector {
+      max-width: none;
+      width: auto;
+      display: inline-block;
+      position: relative;
+      select {
+       display: block;
+       appearance: none;
+       width: 100%;
+       margin: 0;
+       outline: 0;
+       padding: 0.625rem 2.25rem 0.625rem 1.25rem;
+       text-align: left;
+       border-radius: 40px;
+       text-indent: 0;
+       background: #fff;
+       border: 1px solid #dfdfdf;
+       font-weight: 700;
+       font-size: 0.75rem;
+       line-height: 1.5;
+       color: #111;
+       transition: all 100ms cubic-bezier(0.4, 0, 0.4, 1);
+       &:hover {
+        border-color: #686868;
+       }
+      }
+      .svgIcon {
+       position: absolute;
+       right: 0.9375rem;
+       top: 0.75rem;
+       fill: currentColor;
+       pointer-events: none;
+       width: 1rem;
+       height: 1rem;
+       display: inline-block;
+       transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+      }
+     }
+    }
+    .copyright {
+     font-size: 0.75rem;
+     margin-bottom: 1.25rem;
+     p {
+      margin-bottom: 0.5rem;
+     }
+    }
+    .legalLinks {
+     font-size: 0.75rem;
+     margin-bottom: 1.25rem;
+     ul {
+      list-style: none;
+      margin-left: 0;
+      padding-left: 0;
+      li {
+       display: inline-block;
+       margin: 0 1.25rem 0 0;
+       a {
+        text-decoration: none;
+        color: #111;
+       }
+      }
+     }
+    }
+    .legalInformation {
+     font-size: 0.75rem;
+     margin-bottom: 2.5rem;
+     p {
+      margin-bottom: 0.5rem;
+      a {
+       text-decoration: underline;
+       color: #484848;
+      }
      }
     }
    }

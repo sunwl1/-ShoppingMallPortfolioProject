@@ -733,6 +733,16 @@ header .headContainer .tools li img {
   color: #fff;
 }
 
+.pageContainer .mains .informs {
+  margin: calc(0.625rem * -1);
+}
+
+@media (min-width: 37.5em) {
+  .pageContainer .mains .informs {
+    margin: calc(0.9375rem * -1);
+  }
+}
+
 .pageContainer .mains .informs h2 {
   font-size: 1.5rem;
   font-weight: bold;
@@ -741,7 +751,18 @@ header .headContainer .tools li img {
   margin-bottom: 2.5rem;
 }
 
-.pageContainer .mains .informs ul li {
+.pageContainer .mains .informs .infoList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: calc(.9375rem * -1);
+}
+
+.pageContainer .mains .informs .infoList .infoItem {
+  -ms-flex-preferred-size: calc(100% - .625rem * 2);
+      flex-basis: calc(100% - .625rem * 2);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -749,10 +770,53 @@ header .headContainer .tools li img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin: .9375rem;
 }
 
-.pageContainer .mains .informs ul li img {
+@media (min-width: 37.5em) {
+  .pageContainer .mains .informs .infoList .infoItem {
+    -ms-flex-preferred-size: calc(49.9% - .9375rem * 2);
+        flex-basis: calc(49.9% - .9375rem * 2);
+  }
+}
+
+@media (min-width: 56.25em) {
+  .pageContainer .mains .informs .infoList .infoItem {
+    -ms-flex-preferred-size: calc(33% - 1.25rem * 2);
+        flex-basis: calc(33% - 1.25rem * 2);
+  }
+}
+
+.pageContainer .mains .informs .infoList .infoItem img {
   width: 100%;
+}
+
+.pageContainer .mains .informs .infoList .infoItem button {
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 0.75rem;
+  background: #fff;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  padding: 0.6rem 1.25rem;
+  border: 1px solid #222;
+  color: #222;
+  font-weight: 700;
+  -webkit-transition: all 100ms ease-in-out;
+  transition: all 100ms ease-in-out;
+  border-radius: 6px;
+  outline: none;
+}
+
+.pageContainer .mains .informs .infoList .infoItem button:hover {
+  background: #222;
+  color: #fff;
 }
 
 .footer {
@@ -800,6 +864,11 @@ header .headContainer .tools li img {
   margin-bottom: 0.9375rem;
 }
 
+.footer .footerContainer .footerContainerInner .footerRow .featuredLink p a {
+  text-decoration: underline;
+  color: inherit;
+}
+
 .footer .footerContainer .footerContainerInner .footerRow .linkGroups {
   margin-bottom: 2.5rem;
 }
@@ -840,6 +909,7 @@ header .headContainer .tools li img {
   border: none;
   text-align: left;
   width: 100%;
+  background: transparent;
 }
 
 .footer .footerContainer .footerContainerInner .footerRow .accordion .accordionItem h4 .accordionBtn .accoTitle {
@@ -859,6 +929,21 @@ header .headContainer .tools li img {
   height: 1.5rem;
   width: 1.5rem;
   fill: #111;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.footer .footerContainer .footerContainerInner .footerRow .accordion .accordionItem h4 .accordionBtn .svgIconRot {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
 .footer .footerContainer .footerContainerInner .footerRow .accordion .accordionItem .accoContent {
@@ -893,4 +978,192 @@ header .headContainer .tools li img {
 
 .footer .footerContainer .footerContainerInner .footerRow .accordion .itemActive {
   overflow: visible;
+}
+
+.footer .footerContainer .footerContainerInner .footerRow .snsLinkArea {
+  margin-bottom: 1.875rem;
+}
+
+.footer .footerContainer .footerContainerInner .footerRow .snsLinkArea .snsLinkList {
+  margin-bottom: -0.625rem;
+}
+
+.footer .footerContainer .footerContainerInner .footerRow .snsLinkArea .snsLinkList .snsLinkItem {
+  margin-right: 0.625rem;
+  margin-bottom: 0.625rem;
+  display: inline-block;
+}
+
+.footer .footerContainer .footerContainerInner .footerRow .snsLinkArea .snsLinkList .snsLinkItem .snsLink {
+  border: 0.0625rem solid #dfdfdf;
+  padding: 0.3125rem;
+  height: auto;
+  text-decoration: none;
+  border-radius: 40px;
+  position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 100ms cubic-bezier(0.4, 0, 0.4, 1);
+  transition: all 100ms cubic-bezier(0.4, 0, 0.4, 1);
+  cursor: pointer;
+}
+
+.footer .footerContainer .footerContainerInner .footerRow .snsLinkArea .snsLinkList .snsLinkItem .snsLink:hover {
+  border-color: #686868;
+}
+
+.footer .footerContainer .footerContainerInner .footerRow .snsLinkArea .snsLinkList .snsLinkItem .snsLink .svgIcon {
+  color: #484848;
+  display: inline-block;
+  height: 1.5rem;
+  width: 1.5rem;
+  fill: currentColor;
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.footer .footerContainer .footerContainerInner .footerRow .langArea {
+  margin-bottom: 1.875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer .footerContainer .footerContainerInner .footerRow .langArea .countrySelector {
+  margin: 0 0.625rem 0 0;
+  display: inline-block;
+  width: auto;
+}
+
+.footer .footerContainer .footerContainerInner .footerRow .langArea .countrySelector .changeCountry {
+  display: inline-block;
+  color: #484848;
+  padding: 0.625rem 1.25rem 0.625rem 2.5rem;
+  border-radius: 40px;
+  border: 1px solid #dfdfdf;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.5;
+  white-space: nowrap;
+  -webkit-transition: all 100ms cubic-bezier(0.4, 0, 0.4, 1);
+  transition: all 100ms cubic-bezier(0.4, 0, 0.4, 1);
+  vertical-align: top;
+  text-decoration: none;
+  position: relative;
+}
+
+.footer .footerContainer .footerContainerInner .footerRow .langArea .countrySelector .changeCountry:hover {
+  border-color: #686868;
+}
+
+.footer .footerContainer .footerContainerInner .footerRow .langArea .countrySelector .changeCountry .svgIcon {
+  display: inline-block;
+  height: 1.5rem;
+  width: 1.5rem;
+  fill: currentColor;
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  position: absolute;
+  left: 0.75rem;
+  top: 0.4375rem;
+}
+
+.footer .footerContainer .footerContainerInner .footerRow .langArea .langSelector {
+  max-width: none;
+  width: auto;
+  display: inline-block;
+  position: relative;
+}
+
+.footer .footerContainer .footerContainerInner .footerRow .langArea .langSelector select {
+  display: block;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 100%;
+  margin: 0;
+  outline: 0;
+  padding: 0.625rem 2.25rem 0.625rem 1.25rem;
+  text-align: left;
+  border-radius: 40px;
+  text-indent: 0;
+  background: #fff;
+  border: 1px solid #dfdfdf;
+  font-weight: 700;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: #111;
+  -webkit-transition: all 100ms cubic-bezier(0.4, 0, 0.4, 1);
+  transition: all 100ms cubic-bezier(0.4, 0, 0.4, 1);
+}
+
+.footer .footerContainer .footerContainerInner .footerRow .langArea .langSelector select:hover {
+  border-color: #686868;
+}
+
+.footer .footerContainer .footerContainerInner .footerRow .langArea .langSelector .svgIcon {
+  position: absolute;
+  right: 0.9375rem;
+  top: 0.75rem;
+  fill: currentColor;
+  pointer-events: none;
+  width: 1rem;
+  height: 1rem;
+  display: inline-block;
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.footer .footerContainer .footerContainerInner .footerRow .copyright {
+  font-size: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.footer .footerContainer .footerContainerInner .footerRow .copyright p {
+  margin-bottom: 0.5rem;
+}
+
+.footer .footerContainer .footerContainerInner .footerRow .legalLinks {
+  font-size: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.footer .footerContainer .footerContainerInner .footerRow .legalLinks ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.footer .footerContainer .footerContainerInner .footerRow .legalLinks ul li {
+  display: inline-block;
+  margin: 0 1.25rem 0 0;
+}
+
+.footer .footerContainer .footerContainerInner .footerRow .legalLinks ul li a {
+  text-decoration: none;
+  color: #111;
+}
+
+.footer .footerContainer .footerContainerInner .footerRow .legalInformation {
+  font-size: 0.75rem;
+  margin-bottom: 2.5rem;
+}
+
+.footer .footerContainer .footerContainerInner .footerRow .legalInformation p {
+  margin-bottom: 0.5rem;
+}
+
+.footer .footerContainer .footerContainerInner .footerRow .legalInformation p a {
+  text-decoration: underline;
+  color: #484848;
 }
