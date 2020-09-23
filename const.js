@@ -34,7 +34,7 @@ const imageState = {
     ],
 
     innerItemBox : [
-        { Name : '가나다라', subInfo : '마바사', price : '타파하'},
+        { Name : '가나다라', subInfo : '마바사', price : '12000원'},
         { Name : '마바사', subInfo : '주량', price : 'no beer'},
         { Name : 'no soju', subInfo : '마바사', price : '아자차카'}
     ]
