@@ -1,104 +1,29 @@
-// src="https://kit.fontawesome.com/de6911476d.js"
-// crossorigin="anonymous"
+// function createCir(arrPosition, element) {
+//     arrPosition.forEach( () => {
+//         const circleSrc = document.createElement('a');
+//         const circle = document.createElement('div');
+//         const circleChild = document.createElement('div');
+//         circle.appendChild(circleChild);
+//         circle.appendChild(circleSrc);
+//         element.appendChild(circle);
 
+//         circleSrc.href = arrPosition.href;
+//         circle.id = 'idParentCircle';
+//         circle.className = 'parentCircle';
+//         circle.style.position = 'absolute';
+//         circle.style.visibility = 'visible';
+//         circle.style.top = arrPosition.top;
+//         circle.style.left = arrPosition.left;
+//         // circle.onmouseover = () => { inTransCir(circle, true); };
+//         // circle.onmouseout = () => { inTransCir(circle, false); };
 
+//         circleChild.className = 'chlidCircle';
 
-// class movieInfo {
-//     movieName = '';
-//     summary = '';
-//     runningTime = '';
-//     reservationRate = '';
-//     director = '';
-//     actor = '';
-//     openingDate = '';
-//     grade = '';
-//     photo = '';
-//     trailer = '';
-//     constructor(movieName, summary, runningTime, reservationRate, director,
-//          actor, openingDate, grade, photo, trailer) {
-//              this.movieName = movieName;
-//              this.summary = summary;
-//              this.runningTime = runningTime;
-//              this.reservationRate = reservationRate;
-//              this.director = director;
-//              this.actor = actor;
-//              this.openingDate = openingDate;
-//              this.grade = grade;
-//              this.photo = photo;
-//              this.trailer = trailer;
-//          }
+//     });
 // }
+// createCir(imageState.innerCircle, document.getElementById('imgLinkBox'));
 
-
-// let createI = document.createElement('div');
-// let createI2 = document.createElement('div');
-// createI.style.border = '1px solid white';
-// createI.style.border
-
-
-// // class Icon {
-// //     constructor(position, top, right, bottom, left){
-// //         let createI = document.createElement('i');
-// //        createI.className ='far fa-dot-circle';
-// //        createI.style.width = '15px';
-// //        createI.style.height = '15px';
-// //        createI.style.position = position;
-// //        createI.style.top = top;
-// //        createI.style.right = right;
-// //        createI.style.bottom = bottom;
-// //        createI.style.left = left;
-           
-     
-// //        document.body.appendChild(createI);
-
-// //     }
-// // }
-
-// let first = new Icon('absolute','0px','0px','0px','0px')
-// let s = new Icon('absolute','20px','20px','20px','20px')
-// let t = new Icon('absolute','30px','50px','30px','100px')
-// let f = new Icon('absolute','40px','40px','40px','90px')
-
-// let img = document.getElementById('img')
-
-
-// class Circle {
-    
-//     constructor() {
-//         this.createCircle = document.createElement('div')
-//         this.createCircle.className = 'circle'
-//         this.createCircle.style.width = '30px';
-//         this.createCircle.style.height = '30px';
-//         this.createCircle.style.borderRadius = '50%';
-//         this.createCircle.style.border = '10px solid rgba(0,0,0,0.4)';
-//         this.createCircle.style.margin = '10px';
-//         this.createCircle.style.background = 'white';
-//         this.createCircle.style.transition = 'all .2s ease-in-out';
-//         this.createCircle.style.position = 'absolute';
-//         document.body.appendChild(this.createCircle);
-//          }
-
-//     setPos = function(top,left) 
-    
-//     {
-//         this.createCircle.style.top = top;
-//         this.createCircle.style.left = left;   
-//     }
-// };
-
-
-
-// let first = 
-// [
-// ];
-
-// tops = ['5%','10%','30%','45%','60%'],
-// left =['40px','50px','70px','80px','90px']
-
-// for (let i = 0; i < 5; i++) {
-//     first[i] =  new Circle(); 
-//     first[i].setPos(tops[i],left[i]);
-// }
+//==>>> 간단히 써클 만드는 함수
 
 function Contaierbox(link, imgSrc){
     let createContainer = document.createElement('div');
@@ -234,3 +159,47 @@ function outTransCircle(index) {
     outTransChlidCircle[index].style.transition = '0.3s 0.3s ease-in-out';
 }
 
+==>> 만들고 이미지 밖 나갔다가 들어왔다가 하는거
+
+
+// function createArrowBox(element, name, info, price) {
+//     const arrowBox = document.createElement('div');
+//     const itemName = document.createElement('h2');
+//     const itemInfo = document.createElement('p');
+//     const itemPrice = document.createElement('p');
+//     const arrowIcon = document.createElement('p');
+
+//     arrowBox.appendChild(itemName);
+//     arrowBox.appendChild(itemInfo);
+//     arrowBox.appendChild(itemPrice);
+//     arrowBox.appendChild(arrowIcon);
+//     element.appendChild(arrowBox);
+
+//     arrowBox.className = 'arrow_box';
+//     arrowBox.style.position = 'absolute';
+//     arrowBox.style.bottom = '70px';
+//     arrowBox.style.width = '100px';
+//     arrowBox.style.height = '80px';
+//     arrowBox.style.left = '-27px';
+
+//     itemName.innerHTML = name;
+//     itemName.style.width = '70px';
+//     itemName.style.padding = '5px 5px 5px 4px';
+//     itemInfo.innerHTML = info;
+//     itemInfo.style.width = '70px';
+//     itemInfo.style.padding = '5px 5px 5px 4px';
+//     itemPrice.innerHTML = price;
+//     itemPrice.style.width = '70px';
+//     itemPrice.style.padding = '5px 5px 5px 4px';
+//     arrowIcon.innerHTML = '&gt;';
+//     arrowIcon.style.position = 'absolute';
+//     arrowIcon.style.left = '80px';
+//     arrowIcon.style.top = '0px';
+
+
+// }
+
+// createArrowBox(document.querySelector('.parentCircle'), '가나다라', '마바사', '123123');
+
+
+==>> arrowBox

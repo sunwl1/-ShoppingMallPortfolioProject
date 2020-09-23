@@ -5,8 +5,6 @@ function showCircle(element, isVisible) {
         if (isVisible) i.style.visibility = 'visible';
         else i.style.visibility = 'hidden';
     }
-
-  
 }
 
 function inTrnasCircle(element, isTrans) {
@@ -30,12 +28,8 @@ function inTrnasCircle(element, isTrans) {
     }
 }
 
-
-
-
 function Contaierbox(link, imgSrc){
    
-
     const linkBox = document.createElement('a');
     const linkImg = document.createElement('img');
     const linkDiv = document.createElement('div');
@@ -81,7 +75,50 @@ function createCir(arrPosition, element) {
         circleChild.className = 'chlidCircle';
     });
 
- 
 }
 
-createCir([[0, 0], [30, 30], [100, 50]], document.getElementById('imgLinkBox'));
+createCir([[100, 100], [300, 650], [100, 1200]], document.getElementById('imgLinkBox'));
+
+function createArrowBox(element, link, name, info, price) {
+    const arrowBoxLink = document.createElement('a');
+    const arrowBox = document.createElement('div');
+    const itemName = document.createElement('h2');
+    const itemInfo = document.createElement('p');
+    const itemPrice = document.createElement('p');
+    const arrowIcon = document.createElement('p');
+
+    arrowBoxLink.appendChild(itemName);
+    arrowBoxLink.appendChild(itemInfo);
+    arrowBoxLink.appendChild(itemPrice);
+    arrowBoxLink.appendChild(arrowIcon);
+    arrowBox.appendChild(arrowBoxLink);
+    element.appendChild(arrowBox);
+
+    arrowBox.className = 'arrow_box';
+    arrowBox.style.position = 'absolute';
+    arrowBox.style.bottom = '70px';
+    arrowBox.style.width = '100px';
+    arrowBox.style.height = '80px';
+    arrowBox.style.left = '-27px';
+
+    arrowBoxLink.href = link;
+
+    itemName.innerHTML = name;
+    itemName.style.width = '70px';
+    itemName.style.padding = '5px 5px 5px 4px';
+
+    itemInfo.innerHTML = info;
+    itemInfo.style.width = '70px';
+    itemInfo.style.padding = '5px 5px 5px 4px';
+
+    itemPrice.innerHTML = price;
+    itemPrice.style.width = '70px';
+    itemPrice.style.padding = '5px 5px 5px 4px';
+
+    arrowIcon.style.position = 'absolute';
+    arrowIcon.style.left = '80px';
+    arrowIcon.style.top = '0px';
+    arrowIcon.innerHTML = '&gt;';
+}
+
+createArrowBox(document.querySelector('.parentCircle'), 'https://www.naver.com/', '가나다라', '마바사', '123123');

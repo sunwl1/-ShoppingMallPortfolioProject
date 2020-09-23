@@ -23,17 +23,39 @@ const Pinterest = {
 const imageState = {
     imgSrc : '이케아1.jpg',
     linkSrc : 'https://www.naver.com/',
-    top : 100,
-    left : 100,
     width : 500,
     height: 500,
-    innerCircle: [
-        { top : 100, left : 100, href:'https://www.naver.com/' },
-        { top : 200, left : 200, href:'https://www.naver.com/' },
-        { top : 300, left : 300, href:'https://www.naver.com/' },
-        { top : 400, left : 400, href:'https://www.naver.com/' },
-        { top : 500, left : 500, href:'https://www.naver.com/' },
+    top : 100,
+    left : 100,
+    innerCircle : [
+        { top : 100, left : 100, src:'https://www.daum.net/' },
+        { top : 200, left : 200, src:'https://www.naver.com/' },
+        { top : 300, left : 300, src:'https://www.naver.com/' },
+    ],
+
+    innerItemBox : [
+        { Name : '가나다라', subInfo : '마바사', price : '타파하'},
+        { Name : '마바사', subInfo : '주량', price : 'no beer'},
+        { Name : 'no soju', subInfo : '마바사', price : '아자차카'}
     ]
 }
 
-// imageState.innerCircle.forEach
+const imageState2 = {
+    imgSrc : '이케아2.jpg',
+    linkSrc : 'https://www.naver.com/',
+    width : 600,
+    height: 600,
+    top : 600,
+    left : 600,
+    innerCircle : [
+        { top : 100, left : 100, src:'https://www.daum.net/' },
+        { top : 200, left : 200, src:'https://www.naver.com/' },
+        { top : 300, left : 300, src:'https://www.naver.com/' },
+    ],
+
+    innerItemBox : [
+        { Name : '가나다라', subInfo : '마바사', price : '마바사'},
+        { Name : '마바사', subInfo : '주량', price : 'no beer'},
+        { Name : 'no soju', subInfo : '마바사', price : '마바사'}
+    ]
+}
