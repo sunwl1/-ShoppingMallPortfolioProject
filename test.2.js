@@ -41,46 +41,53 @@ function inTransCir(element, isTrans) {
     }
 }
 
+const imgsContainer = document.createElement('div');
+    imgsContainer.id = 'container';
+    document.body.appendChild(imgsContainer);
+
+
+
 function Contaierbox(obj) {
+ 
     const linkBox = document.createElement('a');
     const linkImg = document.createElement('img');
     const linkDiv = document.createElement('div');
 
     linkBox.appendChild(linkImg);
     linkDiv.appendChild(linkBox);
-    document.body.appendChild(linkDiv);
+    imgsContainer.appendChild(linkDiv);
+
+    imgsContainer.id = 'container';
+    linkDiv.className = 'grid-item';
 
     linkBox.onmouseenter = () => { showCircle(linkBox, true); };
     linkBox.onmouseleave = () => { showCircle(linkBox, false); };
 
-    for (const i in obj) {
-        linkBox.id = 'imgLinkBox';
-        linkBox.href = obj.linkSrc;
-        
-        linkBox.className = 'imgLinkBoxClass';
-        linkDiv.style.width = `${obj.width}px`;
-        linkDiv.style.height =`${obj.height}px`;
-        linkDiv.style.position = 'absolute';
-        linkDiv.style.top = `${obj.top}px`;
-        linkDiv.style.left =`${obj.left}px`;
+    linkBox.id = 'imgLinkBox';
+    linkBox.href = obj.linkSrc;
+    linkBox.className = 'imgLinkBoxClass';
 
-        linkImg.src = obj.imgSrc;
-        linkImg.style.width = '100%';
-        linkImg.style.height = '100%';
-    }
-    for (const i in obj.innerCircle,  obj.innerItemBox) {
+    linkImg.src = obj.imgSrc;
+    linkImg.style.width = '100%';
+    linkImg.style.height = '100%';
+    
+    for (const i of obj.inner) {
+        const circlePosition = document.createElement('div');
         const circleSrc = document.createElement('a');
         const circle = document.createElement('div');
         const circleChild = document.createElement('div');
         circle.appendChild(circleChild);
         circleSrc.appendChild(circle);
-        linkBox.appendChild(circleSrc);
-    
-        circleSrc.href = obj.innerCircle[i].src;
+        circlePosition.appendChild(circleSrc)
+        linkBox.appendChild(circlePosition);
+
+        circleSrc.href = i.circle.src;
         circle.id = 'idParentCircle';
         circle.className = 'parentCircle';
-        circle.style.top = `${obj.innerCircle[i].top}px`;
-        circle.style.left = `${obj.innerCircle[i].left}px`;
+        circlePosition.style.position = 'absolute';
+        circlePosition.className = 'circle-position';
+        circlePosition.style.top = `${i.circle.top}%`;
+        circlePosition.style.left = `${i.circle.left}%`;
         circle.onmouseover = () => { inTransCir(circle, true), showItem(circle, true); };
         circle.onmouseout = () => { inTransCir(circle, false), showItem(circle, false); };
     
@@ -102,14 +109,19 @@ function Contaierbox(obj) {
         itemInfoBox.onmouseover = () => { showItem(circle, true); };
         itemInfoBox.onmouseout = () => { showItem(circle, false); };
     
-        itemName.innerHTML = obj.innerItemBox[i].Name;
+        itemName.innerHTML = i.ItemBox.Name;
         itemName.className = 'item-name';
+        itemName.id = i.ItemBox.Name;
     
-        itemInfo.innerHTML = obj.innerItemBox[i].subInfo;
+        itemInfo.innerHTML = i.ItemBox.subInfo;
         itemInfo.className = 'item-info';
+        itemInfo.id = i.ItemBox.subInfo;
+    
    
-        itemPrice.innerHTML = obj.innerItemBox[i].price;
+        itemPrice.innerHTML = `&bsol; ${i.ItemBox.price}`;
         itemPrice.className = 'item-price';
+        itemPrice.id = i.ItemBox.price;
+    
     
         arrowIcon.className = 'arrow-icon';
         arrowIcon.innerHTML = '&gt;';
@@ -118,5 +130,12 @@ function Contaierbox(obj) {
 
 Contaierbox(imageState);
 Contaierbox(imageState2);
+Contaierbox(imageState3);
+Contaierbox(imageState4);
+Contaierbox(imageState5);
+Contaierbox(imageState6);
+Contaierbox(imageState7);
+Contaierbox(imageState8);
+Contaierbox(imageState9);
 
 
