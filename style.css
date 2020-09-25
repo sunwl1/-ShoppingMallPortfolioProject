@@ -61,8 +61,8 @@ table {
 	position: absolute;
 	visibility: hidden;
 	opacity: 0;
-	top: 50%;
-	left: 50%;
+	box-sizing: inherit;
+	display: flex;
 }
 
 .chlidCircle{
@@ -75,17 +75,20 @@ table {
 	left:50%;
 	transform: translate(-50%, -50%);
 	transition: all 0.2s ease-in-out;
+
 }
 
 .item_infoBox {
+
 	position: absolute;
 	visibility: hidden;
-	transform: translateX(-37%) translateY(-100%) translateY(-1.5rem);
+	transform: translateX(-37%) translateY(-82%) translateY(-1.5rem);
 	min-width: 7.5rem;
 	background-color: white;
 	font-size: 0.875rem;
 	padding: 10px;
 	box-shadow: 0px 0px 2px 2px rgba(214, 214, 214, 0.9);
+	z-index: 1;
 }
 
 .item-name {
@@ -117,7 +120,7 @@ table {
 }
 
 .arrow-icon{
-	left: 90px;
+	left: 80%;
 	font-size: 2rem;
 	font-weight: bolder;
 	top: 0px;
@@ -129,46 +132,48 @@ table {
 	grid-auto-flow: row dense;
 	grid-auto-rows: 1fr;
 	grid-row-gap: 1.25rem;
-	margin: 0;
 	max-width: 112rem;
 	margin: 0 auto;
-	box-sizing: border-box;
-	grid-template-columns: repeat(4, minmax(0, 1fr));
+	box-sizing: inherit;
+	outline: none;	
+	grid-template-columns: repeat(4, minmax(0,1fr));
 	grid-column-gap: .625rem;
 	grid-row-gap: .625rem;
 	flex-wrap: wrap;
+	align-content: center;
+	justify-content: center;
+	align-items: center;
+	justify-items: center;
 }
 
-@media (min-width: 56.25em){
-	#container {
-		grid-template-columns: repeat(6, minmax(0, 1fr));
-		grid-column-gap: 1.25rem;
-		grid-row-gap: 1.25rem;
-	}
-}
-@media (min-width: 37.5em) {
-	#container {
-		grid-template-columns: repeat(6, minmax(0, 1fr));
-		grid-column-gap: .9375rem;
-		grid-row-gap: .9375rem;
-	}
-}
 .grid-item {
-	display: block;
-	grid-row: span 4;
+	display: flex;
+	grid-row: span 3;
 	grid-column: span 2;
 	position: relative;
 	left: 0px;
 	top: 0px;
-
+	box-sizing: inherit;
+	width:100%;
+	height: 100%;
+	min-width: 1px;
+	min-height: 1px;
 }
 
 .grid-item:nth-child(2) {
-	display: block;
-	grid-row: span 3;
+	display: flex;
+	grid-row: span 2;
 }
 
 .circle-position {
-	box-sizing: inherit;
 	display: block;
+}
+@media (min-width: 56.25em) {
+	.grid-item {
+		grid-row: span 4;
+		width: auto;
+	}
+	.grid-item:nth-child(2) {
+		grid-row: span 3;
+	}
 }

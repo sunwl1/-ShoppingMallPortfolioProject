@@ -47,30 +47,36 @@ const imgsContainer = document.createElement('div');
 
 
 
-function Contaierbox(obj) {
+function contaierBox(obj) {
  
     const linkBox = document.createElement('a');
     const linkImg = document.createElement('img');
     const linkDiv = document.createElement('div');
+    const linkSpan = document.createElement('span');
 
-    linkBox.appendChild(linkImg);
+    linkSpan.appendChild(linkImg)
+    linkBox.appendChild(linkSpan);
     linkDiv.appendChild(linkBox);
     imgsContainer.appendChild(linkDiv);
 
-    imgsContainer.id = 'container';
     linkDiv.className = 'grid-item';
 
-    linkBox.onmouseenter = () => { showCircle(linkBox, true); };
-    linkBox.onmouseleave = () => { showCircle(linkBox, false); };
+    linkDiv.onmouseenter = () => { showCircle(linkDiv, true); };
+    linkDiv.onmouseleave = () => { showCircle(linkDiv, false); };
 
     linkBox.id = 'imgLinkBox';
     linkBox.href = obj.linkSrc;
     linkBox.className = 'imgLinkBoxClass';
 
     linkImg.src = obj.imgSrc;
+    linkImg.sizes = obj.imgSize;
+    linkImg.srcset = obj.imgSrcset;
     linkImg.style.width = '100%';
     linkImg.style.height = '100%';
-    
+    linkImg.style.objectFit = 'cover';
+
+    linkSpan.className = 'contaierWrap';
+
     for (const i of obj.inner) {
         const circlePosition = document.createElement('div');
         const circleSrc = document.createElement('a');
@@ -79,7 +85,7 @@ function Contaierbox(obj) {
         circle.appendChild(circleChild);
         circleSrc.appendChild(circle);
         circlePosition.appendChild(circleSrc)
-        linkBox.appendChild(circlePosition);
+        linkSpan.appendChild(circlePosition);
 
         circleSrc.href = i.circle.src;
         circle.id = 'idParentCircle';
@@ -128,14 +134,22 @@ function Contaierbox(obj) {
     };
 }
 
-Contaierbox(imageState);
-Contaierbox(imageState2);
-Contaierbox(imageState3);
-Contaierbox(imageState4);
-Contaierbox(imageState5);
-Contaierbox(imageState6);
-Contaierbox(imageState7);
-Contaierbox(imageState8);
-Contaierbox(imageState9);
+contaierBox(imageState);
+contaierBox(imageState1);
+contaierBox(imageState2);
+contaierBox(imageState3);
+contaierBox(imageState4);
+contaierBox(imageState5);
+contaierBox(imageState6);
+contaierBox(imageState7);
+contaierBox(imageState8);
+contaierBox(imageState9);
+contaierBox(imageState10);
+contaierBox(imageState11);
+contaierBox(imageState12);
+contaierBox(imageState13);
+contaierBox(imageState14);
+contaierBox(imageState15);
+contaierBox(imageState16);
 
 
