@@ -1,0 +1,152 @@
+@import '../scss/mixin';
+
+.pageContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1.25rem;
+    max-width: 112rem;
+    margin: 0 auto;
+    @include v-large {
+      padding: 0 2.5rem 0 1.25rem;
+    }
+    .mains {
+      margin-bottom: 3.75rem;
+      width: 100%;
+      .event {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        @include v-large {
+          flex-direction: row-reverse;
+        }
+        .eventImg {
+          @include v-large {
+            width: 66%;
+          }
+          a {
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+        .eventSum {
+          padding: 3.125rem;
+          background: #dca940;
+          flex: 1 1 auto;
+          @include v-large {
+            width: 33%;
+          }
+          h2 {
+            @include artiH2(#fff);
+          }
+          p {
+            color: #fff;
+            margin-bottom: 0.625rem;
+            & + p {
+              margin-bottom: 0.5rem;
+            }
+          }
+          a {
+            @include artiBtn(#fff);
+          }
+        }
+      }
+      .notice {
+        background: #f3ece2;
+        padding: 2.5rem;
+        padding-bottom: 60px;
+        h2 {
+          @include artiH2;
+        }
+        p {
+          margin-bottom: 1.875rem;
+        }
+        a {
+          @include artiBtn(#111, #fff);
+        }
+      }
+      .news {
+        display: flex;
+        flex-wrap: wrap;
+        margin: calc(0.625rem * -1);
+        justify-content: center;
+        @include v-large {
+          margin: calc(0.9375rem * -1);
+        }
+        .newsItemContainer {
+          display: flex;
+          flex-direction: column;
+          flex-basis: calc(100% - 0.625rem * 2);
+          margin: 0.625rem;
+          flex-grow: 0;
+          width: 100%;
+          @include v-large {
+            flex-basis: calc(49.9% - 0.9375rem * 2);
+          }
+          img {
+            width: 100%;
+            margin-bottom: 0.9375rem;
+          }
+          h2 {
+            @include artiH2;
+            word-break: break-word;
+            font-size: 1.5rem;
+            font-weight: bold;
+            @include v-large {
+              font-size: 2.25rem;
+            }
+          }
+          p {
+            margin-bottom: 1rem;
+          }
+          a {
+            @include artiBtn(#111, #fff);
+          }
+        }
+      }
+      .informs {
+        margin: calc(0.625rem * -1);
+        @include v-medium {
+          margin: calc(0.9375rem * -1);
+        }
+        h2 {
+          font-size: 1.5rem;
+          font-weight: bold;
+          line-height: 1.33;
+          color: #111;
+          margin-bottom: 2.5rem;
+          margin-left: 1rem;
+        }
+        .infoList {
+          display: flex;
+          flex-wrap: wrap;
+          margin: calc(0.9375rem * -1);
+          justify-content: center;
+          .infoItem {
+            flex-basis: calc(100% - 0.625rem * 2);
+            display: flex;
+            flex-direction: column;
+            margin: 0.9375rem;
+            @include v-medium {
+              flex-basis: calc(49.9% - 0.9375rem * 2);
+            }
+            @include v-large {
+              flex-basis: calc(33% - 1.25rem * 2);
+            }
+            img {
+              width: 100%;
+            }
+            button {
+              position: relative;
+              justify-content: center;
+              align-items: center;
+              margin-top: 0.75rem;
+              background: #fff;
+              @include artiBtn(#222, #fff);
+            }
+          }
+        }
+      }
+    }
+  }

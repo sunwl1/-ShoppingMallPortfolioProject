@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="../css/reset.css" />
-    <link rel="stylesheet" href="../css/login.css" />
-  </head>
-  <body>
+<link rel="stylesheet" href="../css/login.css" />
     <div class="wrapper">
       <div class="loginHeader">
         <div class="loginHeaderTop">
@@ -121,7 +112,5 @@
         </footer>
       </div>
     </div>
-    <script src="../js/login.js"></script>
-    <script src="../js/validation.js"></script>
-  </body>
-</html>
+    <script src="./js/login.js"></script>
+    <script src="./js/validation.js"></script>
