@@ -11,13 +11,13 @@
 //   }
 // }
 
-function showItem(element, isVisible) {
-  const childItem = element.getElementsByClassName('parentCircle');
-  for (const i of childItem) {
-    if (isVisible) i.style.visibility = 'visible';
-    else i.style.visibility = 'hidden';
-  }
-}
+// function showItem(element, isVisible) {
+//   const childItem = element.getElementsByClassName('parentCircle');
+//   for (const i of childItem) {
+//     if (isVisible) i.style.visibility = 'visible';
+//     else i.style.visibility = 'hidden';
+//   }
+// }
 
 // function inTransCir(element, isTrans) {
 //   const chlidCir = element.querySelector('.chlidCircle');
@@ -94,6 +94,16 @@ const imgsContainer = document.createElement('div');
 imgsContainer.id = 'container';
 document.body.appendChild(imgsContainer);
 
+// function homzzang() {
+//   var w = window.outerWidth;
+
+//   var h = window.outerHeight;
+
+//   var txt = 'Window size: width=' + w + ', height=' + h;
+
+//   document.getElementById('demo').innerHTML = txt;
+// }
+
 function contaierBox(obj) {
   const linkBox = document.createElement('a');
   const linkImg = document.createElement('img');
@@ -127,24 +137,31 @@ function contaierBox(obj) {
 
   linkSpan.className = 'contaierWrap';
 
+  const circlePosition = document.createElement('div');
+  linkSpan.appendChild(circlePosition);
+  circlePosition.classList.add('allCircle');
+  circlePosition.style.position = 'absolute';
+  circlePosition.style.width = '100%';
+  circlePosition.style.height = '100%';
+  let tempWidth;
   for (const i of obj.inner) {
-    const circlePosition = document.createElement('div');
     const circleSrc = document.createElement('a');
     const circle = document.createElement('div');
     const circleChild = document.createElement('div');
     circle.appendChild(circleChild);
     circleSrc.appendChild(circle);
     circlePosition.appendChild(circleSrc);
-    linkSpan.appendChild(circlePosition);
 
     circleSrc.href = i.circle.src;
     circle.id = 'idParentCircle';
     circle.className = 'parentCircle';
 
-    circlePosition.style.position = 'absolute';
-    circlePosition.className = 'circle-position';
-    circlePosition.style.top = `calc(${i.circle.top}% - (${circle.offsetWidth}px / 2))`;
-    circlePosition.style.left = `calc(${i.circle.left}% - (${circle.offsetHeight}px / 2))`;
+    circleSrc.style.position = 'absolute';
+    circleSrc.className = 'circle-position';
+    circleSrc.style.top = `${i.circle.top}%`;
+    circleSrc.style.left = `${i.circle.left}%`;
+    // console.log(circlePosition.offsetTop);
+
     // circle.onmouseover = () => {
     //   inTransCir(circle, true), showItem(circle, true);
     // };
@@ -153,6 +170,7 @@ function contaierBox(obj) {
     // };
 
     circleChild.className = 'chlidCircle';
+    tempWidth = circle.offsetWidth / 2;
 
     const itemInfoBox = document.createElement('div');
     const itemName = document.createElement('h2');
@@ -167,12 +185,12 @@ function contaierBox(obj) {
     circle.appendChild(itemInfoBox);
 
     itemInfoBox.className = 'item_infoBox';
-    itemInfoBox.onmouseover = () => {
-      showItem(circle, true);
-    };
-    itemInfoBox.onmouseout = () => {
-      showItem(circle, false);
-    };
+    // itemInfoBox.onmouseover = () => {
+    //   showItem(circle, true);
+    // };
+    // itemInfoBox.onmouseout = () => {
+    //   showItem(circle, false);
+    // };
 
     itemName.innerHTML = i.ItemBox.Name;
     itemName.className = 'item-name';
@@ -189,6 +207,9 @@ function contaierBox(obj) {
     arrowIcon.className = 'arrow-icon';
     arrowIcon.innerHTML = '&gt;';
   }
+
+  // circlePosition.style.top = `-${tempWidth}px`;
+  // circlePosition.style.left = `-${tempWidth}px`;
 }
 
 contaierBox(imageState);
