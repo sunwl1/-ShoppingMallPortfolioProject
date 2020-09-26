@@ -1,179 +1,343 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
 
-a{
-    color: inherit;
-    text-decoration: none;
+a {
+  color: inherit;
+  text-decoration: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 * {
-	word-break: keep-all;
+  word-break: keep-all;
 }
 
 .parentCircle {
-	background-color:rgba(0,0,0,0.2);
-	width: 2rem;
-	height: 2rem;
-	border-radius: 50%;
-	border: 0.2rem solid transparent;
-	transition: all .1s ease-in-out;
-	position: absolute;
-	visibility: hidden;
-	opacity: 0;
-	box-sizing: inherit;
-	display: flex;
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  border: 0.1rem solid transparent;
+  transition: all 0.2s ease-in-out;
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  box-sizing: inherit;
+  display: flex;
 }
 
-.chlidCircle{
-	background: white;
-	width: 1rem;
-	height: 1rem;
-	border-radius: 50%;
-	position: absolute;
-	top:50%;
-	left:50%;
-	transform: translate(-50%, -50%);
-	transition: all 0.2s ease-in-out;
+#imgLinkBox:hover .parentCircle {
+  visibility: visible;
+  opacity: 1;
+}
 
+.parentCircle:hover {
+  width: 1.2rem;
+  height: 1.2rem;
+  border: 0.1rem solid rgba(255, 255, 255, 0.5);
+}
+
+.chlidCircle {
+  background: white;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.2s ease-in-out;
+}
+
+.parentCircle:hover .chlidCircle {
+  width: 0.3rem;
+  height: 0.3rem;
 }
 
 .item_infoBox {
-
-	position: absolute;
-	visibility: hidden;
-	transform: translateX(-37%) translateY(-82%) translateY(-1.5rem);
-	min-width: 7.5rem;
-	background-color: white;
-	font-size: 0.875rem;
-	padding: 10px;
-	box-shadow: 0px 0px 2px 2px rgba(214, 214, 214, 0.9);
-	z-index: 1;
+  position: absolute;
+  visibility: hidden;
+  transform: translateX(-37%) translateY(-82%) translateY(-1.5rem);
+  min-width: 7.5rem;
+  background-color: white;
+  font-size: 0.875rem;
+  padding: 10px;
+  box-shadow: 0px 0px 2px 2px rgba(214, 214, 214, 0.9);
+  z-index: 1;
 }
 
 .item-name {
-	font-size: 0.90rem;
-	width: 63px;
-	padding: 5px 5px 3px 4px;
-	font-weight: bolder;
-	border-bottom: 1px solid transparent;
-	text-shadow: 0.01rem 0.01rem black;
-	margin: 0;
+  font-size: 0.9rem;
+  width: 63px;
+  padding: 5px 5px 3px 4px;
+  font-weight: bolder;
+  border-bottom: 1px solid transparent;
+  text-shadow: 0.01rem 0.01rem black;
+  margin: 0;
 }
 .item-name:hover {
-	border-bottom: 1px solid black;
+  border-bottom: 1px solid black;
 }
 
 .item-info {
-	font-size: 0.87rem;
-	width: 100%;
-	padding: 2px 5px 5px 4px;
-	margin-top: 3px;
+  font-size: 0.87rem;
+  width: 100%;
+  padding: 2px 5px 5px 4px;
+  margin-top: 3px;
 }
 
 .item-price {
-	font-size: 0.9rem;
-	width: 100%;
-	font-weight: bolder;
-	padding: 5px 5px 5px 4px;
-	margin-top: 10px;
+  font-size: 0.9rem;
+  width: 100%;
+  font-weight: bolder;
+  padding: 5px 5px 5px 4px;
+  margin-top: 10px;
 }
 
-.arrow-icon{
-	left: 80%;
-	font-size: 2rem;
-	font-weight: bolder;
-	top: 0px;
-	position: absolute;
+.arrow-icon {
+  left: 80%;
+  font-size: 2rem;
+  font-weight: bolder;
+  top: 0px;
+  position: absolute;
 }
 
 #container {
-	display: grid;
-	grid-auto-flow: row dense;
-	grid-auto-rows: 1fr;
-	grid-row-gap: 1.25rem;
-	max-width: 112rem;
-	margin: 0 auto;
-	box-sizing: inherit;
-	outline: none;	
-	grid-template-columns: repeat(4, minmax(0,1fr));
-	grid-column-gap: .625rem;
-	grid-row-gap: .625rem;
-	flex-wrap: wrap;
-	align-content: center;
-	justify-content: center;
-	align-items: center;
-	justify-items: center;
+  display: grid;
+  grid-auto-flow: row dense;
+  grid-auto-rows: 1fr;
+  max-width: 112rem;
+  margin: 0 auto;
+  box-sizing: inherit;
+  outline: none;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-column-gap: 0.625rem;
+  grid-row-gap: 0.625rem;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
 }
 
 .grid-item {
-	display: flex;
-	grid-row: span 3;
-	grid-column: span 2;
-	position: relative;
-	left: 0px;
-	top: 0px;
-	box-sizing: inherit;
-	width:100%;
-	height: 100%;
-	min-width: 1px;
-	min-height: 1px;
+  display: flex;
+  grid-row: span 3;
+  grid-column: span 2;
+  position: relative;
+  left: 0px;
+  top: 0px;
+  box-sizing: inherit;
+  width: 100%;
+  height: 100%;
+  min-width: 1px;
+  min-height: 1px;
 }
 
 .grid-item:nth-child(2) {
-	display: flex;
-	grid-row: span 2;
+  display: flex;
+  grid-row: span 2;
 }
 
 .circle-position {
-	display: block;
+  display: block;
 }
-@media (min-width: 56.25em) {
-	.grid-item {
-		grid-row: span 4;
-		width: auto;
-	}
-	.grid-item:nth-child(2) {
-		grid-row: span 3;
-	}
+@media (min-width: 37.5em) {
+  #container {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-column-gap: 0.9375rem;
+    grid-row-gap: 0.9375rem;
+  }
+  .grid-item {
+    grid-row: span 4;
+    width: auto;
+  }
+  .grid-item:nth-child(2) {
+    grid-row: span 3;
+  }
+  .parentCircle {
+    width: 1.6rem;
+    height: 1.6rem;
+    border-width: 0.2rem;
+  }
+  .chlidCircle {
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+  .parentCircle:hover {
+    width: 1.6rem;
+    height: 1.6rem;
+    border-width: 0.2rem;
+  }
+  .parentCircle:hover .chlidCircle {
+    width: 0.6rem;
+    height: 0.6rem;
+  }
+  .parentCircle:hover .item_infoBox {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.2s ease-in-out;
+  }
 }
+
+/* @media (min-width: 56.25em) {
+  #container {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-column-gap: 1.25rem;
+    grid-row-gap: 1.25rem;
+  }
+  .grid-item {
+    grid-row: span 4;
+    width: auto;
+  }
+  .grid-item:nth-child(2) {
+    grid-row: span 3;
+  }
+  .parentCircle {
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 0.3rem solid transparent;
+    transition: all 0.2s ease-in-out;
+  }
+  .parentCircle .chlidCircle {
+    width: 1.4rem;
+    height: 1.4rem;
+    transition: all 1s ease-in-out;
+  }
+  .parentCircle:hover {
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 0.3rem solid rgba(255, 255, 255, 0.5);
+    transition: all 0.2s ease-in-out;
+  }
+  .parentCircle:hover .chlidCircle {
+    width: 0.9rem;
+    height: 0.9rem;
+    transition: all 1s ease-in-out;
+  }
+  .parentCircle:hover .item_infoBox {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.2s ease-in-out;
+  }
+} */
