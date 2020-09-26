@@ -22,15 +22,15 @@
                                 </button>
                             </h4>
                             <ul class="accoContent">
-                                <li class="accoContentItem"><a href="/">고객지원</a></li>
-                                <li class="accoContentItem"><a href="/">자주 묻는 질문</a></li>
-                                <li class="accoContentItem"><a href="/">문의하기</a></li>
-                                <li class="accoContentItem"><a href="/">배송조회</a></li>
-                                <li class="accoContentItem"><a href="/">교환환불</a></li>
-                                <li class="accoContentItem"><a href="/">품질보증</a></li>
-                                <li class="accoContentItem"><a href="/">제품리콜</a></li>
-                                <li class="accoContentItem"><a href="/">제품 구매 가이드</a></li>
-                                <li class="accoContentItem"><a href="/">피드백</a></li>
+                                <li class="accoContentItem"><a href="https://www.ikea.com/kr/ko/customer-service/">고객지원</a></li>
+                                <li class="accoContentItem"><a href="https://www.ikea.com/kr/ko/customer-service/faq/">자주 묻는 질문</a></li>
+                                <li class="accoContentItem"><a href="https://www.ikea.com/kr/ko/customer-service/contact-us/">문의하기</a></li>
+                                <li class="accoContentItem"><a href="https://www.ikea.com/kr/ko/customer-service/track-manage-order/">배송조회</a></li>
+                                <li class="accoContentItem"><a href="https://www.ikea.com/kr/ko/customer-service/returns-claims/">교환환불</a></li>
+                                <li class="accoContentItem"><a href="https://www.ikea.com/kr/ko/customer-service/returns-claims/guarantee/">품질보증</a></li>
+                                <li class="accoContentItem"><a href="https://www.ikea.com/kr/ko/customer-service/product-support/recalls/">제품리콜</a></li>
+                                <li class="accoContentItem"><a href="https://www.ikea.com/kr/ko/customer-service/product-support/buying-guides/">제품 구매 가이드</a></li>
+                                <li class="accoContentItem"><a href="https://www.ikea.com/kr/ko/customer-service/services/ikea-pub6e06e990">피드백</a></li>
                             </ul>
                         </li>
                         <li class="accordionItem">
@@ -43,15 +43,15 @@
                                 </button>
                             </h4>
                             <ul class="accoContent">
-                                <li class="accoContentItem"><a href="/">쇼핑하기</a></li>
-                                <li class="accoContentItem"><a href="/">전화 주문</a></li>
-                                <li class="accoContentItem"><a href="/">IKEA Family</a></li>
-                                <li class="accoContentItem"><a href="/">IKEA for Business</a></li>
-                                <li class="accoContentItem"><a href="/">IKEA 모바일 앱</a></li>
-                                <li class="accoContentItem"><a href="/">온라인 플래닝</a></li>
-                                <li class="accoContentItem"><a href="/">IKEA 카탈로그</a></li>
-                                <li class="accoContentItem"><a href="/">결제 옵션</a></li>
-                                <li class="accoContentItem"><a href="/">제품 재고 확인</a></li>
+                                <li class="accoContentItem"><a href="https://www.ikea.com/kr/ko/customer-service/shopping-at-ikea/">쇼핑하기</a></li>
+                                <li class="accoContentItem"><a href="https://www.ikea.com/kr/ko/customer-service/services/-pub57f172e0">전화 주문</a></li>
+                                <li class="accoContentItem"><a href="https://www.ikea.com/kr/ko/ikea-family/">IKEA Family</a></li>
+                                <li class="accoContentItem"><a href="https://www.ikea.com/kr/ko/ikea-business/">IKEA for Business</a></li>
+                                <li class="accoContentItem"><a href="https://www.ikea.com/kr/ko/customer-service/mobile-apps/">IKEA 모바일 앱</a></li>
+                                <li class="accoContentItem"><a href="https://www.ikea.com/kr/ko/planners/">온라인 플래닝</a></li>
+                                <li class="accoContentItem"><a href="https://www.ikea.com/kr/ko/customer-service/catalogues/">IKEA 카탈로그</a></li>
+                                <li class="accoContentItem"><a href="https://www.ikea.com/kr/ko/customer-service/services/finance-options/">결제 옵션</a></li>
+                                <li class="accoContentItem"><a href="https://www.ikea.com/kr/ko/customer-service/stock-availability/">제품 재고 확인</a></li>
                             </ul>
                         </li>
                         <li class="accordionItem">
@@ -64,16 +64,14 @@
                                 </button>
                             </h4>
                             <ul class="accoContent">
-                                <li class="accoContentItem"><a href="/">IKEA 서비스</a></li>
-                                <li class="accoContentItem"><a href="/">배송 서비스</a></li>
-                                <li class="accoContentItem"><a href="/">조립 서비스</a></li>
-                                <li class="accoContentItem">
-                                    <a href="/">홈퍼니싱 컨설팅 서비스</a>
-                                </li>
-                                <li class="accoContentItem"><a href="/">주방 플래닝 서비스</a></li>
-                                <li class="accoContentItem"><a href="/">전화 플래닝 서비스</a></li>
-                                <li class="accoContentItem"><a href="/">바이백 서비스</a></li>
-                                <li class="accoContentItem"><a href="/">온라인 픽업 서비스</a></li>
+                                <li class="accoContentItem"><a href="https://www.ikea.com/kr/ko/customer-service/services/">IKEA 서비스</a></li>
+                                <li class="accoContentItem"><a href="https://www.ikea.com/kr/ko/customer-service/services/delivery/">배송 서비스</a></li>
+                                <li class="accoContentItem"><a href="https://www.ikea.com/kr/ko/customer-service/services/assembly/">조립 서비스</a></li>
+                                <li class="accoContentItem"><a href="https://www.ikea.com/kr/ko/customer-service/services/planning-consultation/">홈퍼니싱 컨설팅 서비스</a> </li>
+                                <li class="accoContentItem"><a href="https://www.ikea.com/kr/ko/customer-service/services/kitchen-planning/">주방 플래닝 서비스</a></li>
+                                <li class="accoContentItem"><a href="https://www.ikea.com/kr/ko/customer-service/services/-pubcfbd36f0">전화 플래닝 서비스</a></li>
+                                <li class="accoContentItem"><a href="https://www.ikea.com/kr/ko/customer-service/services/buy-back-resell/">바이백 서비스</a></li>
+                                <li class="accoContentItem"><a href="https://www.ikea.com/kr/ko/customer-service/services/click-collect/">온라인 픽업 서비스</a></li>
                             </ul>
                         </li>
                         <li class="accordionItem">
@@ -86,11 +84,11 @@
                                 </button>
                             </h4>
                             <ul class="accoContent">
-                                <li class="accoContentItem"><a href="/">기업소개</a></li>
-                                <li class="accoContentItem"><a href="/">데모크래틱 디자인</a></li>
-                                <li class="accoContentItem"><a href="/">지속가능한 생활</a></li>
-                                <li class="accoContentItem"><a href="/">뉴스</a></li>
-                                <li class="accoContentItem"><a href="/">채용정보</a></li>
+                                <li class="accoContentItem"><a href="https://www.ikea.com/kr/ko/this-is-ikea/about-us/">기업소개</a></li>
+                                <li class="accoContentItem"><a href="https://www.ikea.com/kr/ko/this-is-ikea/design/">데모크래틱 디자인</a></li>
+                                <li class="accoContentItem"><a href="https://www.ikea.com/kr/ko/this-is-ikea/sustainable-everyday/">지속가능한 생활</a></li>
+                                <li class="accoContentItem"><a href="https://www.ikea.com/kr/ko/this-is-ikea/newsroom/">뉴스</a></li>
+                                <li class="accoContentItem"><a href="https://ikea.avature.net/ko_KR/External">채용정보</a></li>
                             </ul>
                         </li>
                     </ul>
