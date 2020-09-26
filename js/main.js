@@ -1,15 +1,15 @@
 const lockScreen = (e) => {
-  if ( e == true ) {
+  if (e === true) {
     document.querySelector('.overlay').style.display = 'block';
     document.body.classList.add('lockScroll');
-  }else{
+  } else {
     document.querySelector('.overlay').style.display = 'none';
     document.body.classList.remove('lockScroll');
   }
-}
+};
 
 const burgerMenu = (e) => {
-  if (e == true) {
+  if (e === true) {
     lockScreen(true);
     document.querySelector('.menu').classList.remove('menuHidden');
   } else {
@@ -19,7 +19,7 @@ const burgerMenu = (e) => {
 };
 
 const searchBox = (e) => {
-  if (e == true) {
+  if (e === true) {
     lockScreen(true);
     document.querySelector('.searchBox').classList.add('active');
   } else {
@@ -28,7 +28,7 @@ const searchBox = (e) => {
   }
 };
 const burgerInner = (e) => {
-  if (e == true) {
+  if (e === true) {
     document.querySelector('.menuSubNav').classList.remove('menuSubHidden');
     document.querySelector('.menuNav').classList.add('menuSubHidden');
     document.querySelector('.menuBack').style.display = 'block';
@@ -58,7 +58,7 @@ document.querySelector('.overlay').addEventListener('click', () => {
 });
 
 document.querySelector('.searchFieldInput').addEventListener('blur', () => {
-  document.querySelector('.dropdownInner').style.border = '1px solid #dfdfdf'
+  document.querySelector('.dropdownInner').style.border = '1px solid #dfdfdf';
 });
 document.querySelector('.searchFieldInput').addEventListener('focus', () => {
   searchBox(true);
