@@ -107,12 +107,12 @@ function contaierBox(obj) {
 
   linkDiv.className = 'grid-item';
 
-  linkDiv.onmouseenter = () => {
-    showCircle(linkDiv, true);
-  };
-  linkDiv.onmouseleave = () => {
-    showCircle(linkDiv, false);
-  };
+  // linkDiv.onmouseenter = () => {
+  //   showCircle(linkDiv, true);
+  // };
+  // linkDiv.onmouseleave = () => {
+  //   showCircle(linkDiv, false);
+  // };
 
   linkBox.id = 'imgLinkBox';
   linkBox.href = obj.linkSrc;
