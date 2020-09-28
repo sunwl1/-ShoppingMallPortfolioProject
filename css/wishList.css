@@ -62,22 +62,24 @@
 
 .cart .cartWrapper .cartList .cartItem .itemContent .itemControls .controllers .quantity .qtycontrol { width: 100%; max-width: 352px; height: 40px; margin: 0; padding: 0 10px; border: 1px solid #666; border-radius: 2px; background: #fff url(https://order.ikea.com/kr/ko/checkout/static/media/chevron-down-thin-24.1667eab2.svg) no-repeat right 8px center/1.5rem; -webkit-appearance: none; -moz-appearance: none; appearance: none; font-size: 1rem; line-height: 1.15; font-family: inherit; text-transform: none; }
 
+.cart .cartWrapper .cartList .cartItem .itemContent .itemControls .controllers .addCart { margin-left: .5rem; width: 62.5%; }
+
+.cart .cartWrapper .cartList .cartItem .itemContent .itemControls .controllers .addCart .addCartBtn { display: inline-block; width: 100%; max-width: 352px; height: 40px; margin: 0; border: 1px solid transparent; border-radius: 2px; background: none; font-weight: 400; font-size: 0.8125rem; line-height: 37px; text-decoration: none; vertical-align: middle; white-space: nowrap; cursor: pointer; background-clip: padding-box; overflow: visible; color: #fff; background: #0058a3; }
+
+.cart .cartWrapper .cartList .cartItem .itemContent .itemControls .controllers .addCart .addCartBtn .btnIcon { width: 1.5rem; vertical-align: -6px; margin-right: .5rem; }
+
 .cart .cartWrapper .cartfooter { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: center; -ms-flex-align: center; align-items: center; padding-top: 16px; width: 100%; }
-
-.cart .cartWrapper .cartfooter .deliveryTotal { width: 100%; margin-top: 16px; padding-top: 8px; padding-bottom: 8px; }
-
-.cart .cartWrapper .cartfooter .deliveryTotal .alert { background: #fff; color: #111; border: 1px solid #959595; padding: 0.5rem; border-radius: 2px; font-size: 0.875rem; line-height: 1.1429; position: relative; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; }
-
-.cart .cartWrapper .cartfooter .deliveryTotal .alert .alertIcon { line-height: 0; }
-
-.cart .cartWrapper .cartfooter .deliveryTotal .alert .alertIcon .svgIcon { width: 1rem; height: 1rem; display: inline-block; fill: #111; -webkit-transition: all 0.3s cubic-bezier(0.4, 0, 0, 1); transition: all 0.3s cubic-bezier(0.4, 0, 0, 1); }
-
-.cart .cartWrapper .cartfooter .deliveryTotal .alert .alertIcon .svgIcon [class='white'] { fill: #fff; }
 
 .cart .cartWrapper .cartfooter .orderTotal { margin-top: 8px; font-weight: 700; font-size: 14px; text-align: initial; border: dashed #cacaca; border-width: 1px 0; width: 100%; margin-bottom: 32px; }
 
 .cart .cartWrapper .cartfooter .orderTotal .orderTotalRow { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; padding: 0.35rem 0; font-weight: 700; font-size: 14px; text-align: initial; }
 
-.cart .cartWrapper .cartfooter .checkoutBox { margin-top: 16px; margin-bottom: 16px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; width: 100%; }
+.cart .cartWrapper .cartfooter .addCartText { width: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
 
-.cart .cartWrapper .cartfooter .checkoutBox .checkoutBtn { display: inline-block; width: 100%; max-width: 352px; height: 40px; margin: 0; border: 1px solid transparent; border-radius: 2px; background: none; font-weight: 400; font-size: 0.8125rem; line-height: 37px; text-decoration: none; vertical-align: middle; white-space: nowrap; cursor: pointer; background-clip: padding-box; overflow: visible; color: #fff; background: #004f93; text-align: center; }
+.cart .cartWrapper .cartfooter .addCartText p { margin: 0 0 1em; }
+
+.cart .cartWrapper .cartfooter .addCart { width: 62.5%; }
+
+.cart .cartWrapper .cartfooter .addCart .addCartBtn { display: inline-block; width: 100%; max-width: 352px; height: 40px; margin: 0; border: 1px solid transparent; border-radius: 2px; background: none; font-weight: 400; font-size: 0.8125rem; line-height: 37px; text-decoration: none; vertical-align: middle; white-space: nowrap; cursor: pointer; background-clip: padding-box; overflow: visible; color: #fff; background: #0058a3; }
+
+.cart .cartWrapper .cartfooter .addCart .addCartBtn .btnIcon { width: 1.5rem; vertical-align: -6px; margin-right: .5rem; }

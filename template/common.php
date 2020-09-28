@@ -1,5 +1,5 @@
 <?php
- $root = "/teamproject/";
+ $root = "/teamproject";
  $cssDir = "/teamproject/css/";
  $imgDir = "/teamproject/img/";
 ?>

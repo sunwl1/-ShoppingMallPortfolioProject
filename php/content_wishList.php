@@ -35,7 +35,7 @@
             <div class="controllers">
               <div class="removeItem">
                 <button class="removeBtn" type="button">
-                  <img class="svgIcon" src="../img/trash.svg" alt="제품 삭제하기" />
+                  <img class="svgIcon" src="<?= $imgDir ?>trash.svg" alt="제품 삭제하기" />
                 </button>
               </div>
               <div class="quantity">
@@ -52,7 +52,8 @@
                 </select>
               </div>
               <div class="addCart">
-                <button type="button" class="addCartBtn "><img class="btnIcon" src="https://order.ikea.com/kr/ko/checkout/static/media/buy-online-add-thin-24-white.7ad98bd1.svg" alt="장바구니 추가 버튼">장바구니에 추가</button>
+                <button type="button" class="addCartBtn ">
+                  <img class="btnIcon" src="https://order.ikea.com/kr/ko/checkout/static/media/buy-online-add-thin-24-white.7ad98bd1.svg" alt="장바구니 추가 버튼">장바구니에 추가</button>
               </div>
             </div>
           </div>
@@ -60,30 +61,17 @@
       </div>
     </div>
     <div class="cartfooter">
-      <div class="deliveryTotal">
-        <div class="alert">
-          <div class="alertIcon">
-            <svg focusable="false" viewBox="0 0 16 16" class="svgIcon" aria-hidden="true">
-              <g fill="none" fill-rule="evenodd">
-                <path fill="#0058A3" d="M15 8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"></path>
-                <path class="white" fill-rule="nonzero" d="M9 12H7V7h2v5zM7 5a1 1 0 1 1 2 0 1 1 0 0 1-2 0z"></path>
-              </g>
-            </svg>
-          </div>
-          <div class="alertContainer">
-            <div class="alertText">
-              <p>이 금액에는 배송비가 포함되어 있지 않습니다.</p>
-            </div>
-          </div>
-        </div>
-      </div>
       <div class="orderTotal">
         <div class="orderTotalRow">
           <span class="orderTotalTitle">총 주문금액</span><span class="orderTotalPrice">₩ 36,000</span>
         </div>
       </div>
-      <div class="checkoutBox">
-        <a class="checkoutBtn" role="button" href="">결제하기</a>
+      <div class="addCartText">
+        <p>모든 제품을 온라인으로 구매하시겠습니까?</p>
+      </div>
+      <div class="addCart">
+        <button type="button" class="addCartBtn ">
+          <img class="btnIcon" src="https://order.ikea.com/kr/ko/checkout/static/media/buy-online-add-thin-24-white.7ad98bd1.svg" alt="모두 장바구니 추가 버튼">모두 장바구니에 추가</button>
       </div>
     </div>
   </div>

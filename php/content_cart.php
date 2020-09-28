@@ -44,7 +44,7 @@
             <div class="controllers">
               <div class="removeItem">
                 <button class="removeBtn" type="button">
-                  <img class="svgIcon" src="../img/trash.svg" alt="제품 삭제하기" />
+                  <img class="svgIcon" src="<?=$imgDir ?>trash.svg" alt="제품 삭제하기" />
                 </button>
               </div>
               <div class="quantity">

@@ -1,10 +1,14 @@
+let screenLocked = false;
+
 const lockScreen = (e) => {
   if (e === true) {
     document.querySelector('.overlay').style.display = 'block';
     document.body.classList.add('lockScroll');
+    screenLocked = true;
   } else {
     document.querySelector('.overlay').style.display = 'none';
     document.body.classList.remove('lockScroll');
+    screenLocked = false;
   }
 };
 
@@ -17,7 +21,6 @@ const burgerMenu = (e) => {
     document.querySelector('.menu').classList.add('menuHidden');
   }
 };
-
 const searchBox = (e) => {
   if (e === true) {
     lockScreen(true);
@@ -58,11 +61,11 @@ document.querySelector('.overlay').addEventListener('click', () => {
 });
 
 document.querySelector('.searchFieldInput').addEventListener('blur', () => {
-  document.querySelector('.dropdownInner').style.border = '1px solid #dfdfdf';
+  document.querySelector('.dropdownInner').style.borderTop = '1px solid #dfdfdf';
 });
 document.querySelector('.searchFieldInput').addEventListener('focus', () => {
   searchBox(true);
-  document.querySelector('.dropdownInner').style.border = '2px solid #0058a3';
+  document.querySelector('.dropdownInner').style.borderTop = '2px solid #0058a3';
 });
 
 let arrAccor = document.querySelectorAll('.accordionBtn');
@@ -73,3 +76,31 @@ for (let i = 0; i < arrAccor.length; i++) {
     arrAccor[i].querySelector('.svgIcon').classList.toggle('svgIconRot');
   });
 }
+
+window.addEventListener('wheel', (e) => {
+  if (screenLocked === true) return;
+  const delta = Math.sign(e.deltaY);
+  const head = {
+    offset: 0,
+    height: 0,
+  };
+  if (window.matchMedia('(min-width: 56.25rem)').matches) {
+    head.offset = 100;
+    head.height = 80;
+  } else {
+    head.offset = 200;
+    head.height = 150;
+  }
+  if (delta > 0 && window.scrollY > head.offset) {
+    document.querySelector('header').classList.add('fixed');
+    document.querySelector('header').classList.remove('scrollUp');
+    document.querySelector('.pageContainer').style.marginTop = `${head.height}px`;
+  } else {
+    document.querySelector('header').classList.add('scrollUp');
+    if (window.scrollY < head.height) {
+      document.querySelector('header').classList.remove('fixed');
+      document.querySelector('header').classList.remove('scrollUp');
+      document.querySelector('.pageContainer').style.marginTop = 0;
+    }
+  }
+});

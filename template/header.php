@@ -1,8 +1,8 @@
+<div class="overlay"></div>
 <header>
     <div class="headContainer">
-        <a href="<?=$root ?>" class="mainLogo"> <img src="./img/logo.svg" alt="메인로고" /></a>
+        <a href="<?= $root ?>" class="mainLogo"> <img src="./img/logo.svg" alt="메인로고" /></a>
         <div class="searchBoxContainer">
-            <div class="overlay"></div>
             <form action="" role="search" class="searchBox">
                 <div class="searchWrapper">
                     <div class="sidebar">
@@ -22,20 +22,43 @@
                 </div>
                 <div class="dropdown">
                     <div class="dropdownInner">
-                        <div class="searchResults"></div>
+                        <ol class="searchResults">
+                            <li class="universalItem">
+                                <a tabindex="-1" class="universalItemLink" href="https://www.ikea.com/kr/ko/search/?q=의자">
+                                    <div class="universalItemText">
+                                        <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='#484848' class='svgIcon'>
+                                            <path fill-rule='evenodd' clip-rule='evenodd' d='M13.98 15.395a6.294 6.294 0 111.414-1.414l4.602 4.601-1.414 1.414-4.602-4.601zm.607-5.101a4.294 4.294 0 11-8.587 0 4.294 4.294 0 018.587 0z' fill='currentColor' /></svg>
+                                        <div class="universalItemTitle"><b>의자</b></div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="universalItem">
+                                <a tabindex="-1" class="universalItemLink" href="https://www.ikea.com/kr/ko/search/?q=의자">
+                                    <div class="universalItemText">
+                                        <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='#484848' class='svgIcon'>
+                                            <path fill-rule='evenodd' clip-rule='evenodd' d='M13.98 15.395a6.294 6.294 0 111.414-1.414l4.602 4.601-1.414 1.414-4.602-4.601zm.607-5.101a4.294 4.294 0 11-8.587 0 4.294 4.294 0 018.587 0z' fill='currentColor' /></svg>
+                                        <div class="universalItemTitle"><b>책상</b></div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ol>
                     </div>
                 </div>
             </form>
         </div>
         <ul class="tools">
             <li class="profileBtn">
-                <img src="./img/001-user.svg" alt="마이페이지 아이콘" />
+                <a href="<?= $root ?>/profile.php">
+                    <img src="./img/001-user.svg" alt="마이페이지 아이콘" />
+                </a>
             </li>
             <li class="likesBtn">
-                <img src="./img/002-heart-shape-outline.svg" alt="관심목록 아이콘" />
+                <a href="<?= $root ?>/wishList.php">
+                    <img src="./img/002-heart-shape-outline.svg" alt="관심목록 아이콘" />
+                </a>
             </li>
             <li class="cartBtn">
-                <a href="<?=$root ?>/cart.php">
+                <a href="<?= $root ?>/cart.php">
                     <img src="./img/003-shopping-cart.svg" alt="장바구니 아이콘" />
                 </a>
             </li>
@@ -53,7 +76,7 @@
             </button>
         </div>
         <div class="menuLogo">
-            <a href="<?=$root ?>" class="menuLogoA"> <img src="./img/logo.svg" alt="메인로고" /></a>
+            <a href="<?= $root ?>" class="menuLogoA"> <img src="./img/logo.svg" alt="메인로고" /></a>
         </div>
         <div class="menuBack">
             <button class="menuBackBtn">

@@ -178,6 +178,21 @@
                   text-transform: none;
                 }
               }
+              .addCart{
+                margin-left: .5rem;
+                width: 62.5%;
+                .addCartBtn{
+                  @include boxBtn;
+                  color: #fff;
+                  background: $blue;
+                  .btnIcon{
+                    width: 1.5rem;
+                    vertical-align: -6px;
+                    margin-right: .5rem;
+                  }
+                }
+
+              }
             }
           }
         }
@@ -189,37 +204,6 @@
       align-items: center;
       padding-top: 16px;
       width: 100%;
-      .deliveryTotal {
-        width: 100%;
-        margin-top: 16px;
-        padding-top: 8px;
-        padding-bottom: 8px;
-        .alert {
-          background: #fff;
-          color: #111;
-          border: 1px solid #959595;
-          padding: 0.5rem;
-          border-radius: 2px;
-          font-size: 0.875rem;
-          line-height: 1.1429;
-          position: relative;
-          display: flex;
-          flex-direction: row;
-          .alertIcon {
-            line-height: 0;
-            .svgIcon {
-              width: 1rem;
-              height: 1rem;
-              display: inline-block;
-              fill: #111;
-              transition: all 0.3s cubic-bezier(0.4, 0, 0, 1);
-              [class='white'] {
-                fill: #fff;
-              }
-            }
-          }
-        }
-      }
       .orderTotal {
         margin-top: 8px;
         font-weight: 700;
@@ -238,18 +222,28 @@
           text-align: initial;
         }
       }
-      .checkoutBox {
-        margin-top: 16px;
-        margin-bottom: 16px;
-        display: flex;
-        justify-content: center;
+      .addCartText{
         width: 100%;
-        .checkoutBtn{
-            @include boxBtn;
-            color: #fff;
-            background: $deepblue;
-            text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        p{
+          margin: 0 0 1em;
         }
+      }
+      .addCart{
+        width: 62.5%;
+        .addCartBtn{
+          @include boxBtn;
+          color: #fff;
+          background: $blue;
+          .btnIcon{
+            width: 1.5rem;
+            vertical-align: -6px;
+            margin-right: .5rem;
+          }
+        }
+
       }
     }
   }

@@ -1,4 +1,4 @@
-@import '../scss/mixin';
+@import '../_scss/mixin';
 
 .overlay {
   position: fixed;
@@ -16,6 +16,31 @@ header {
   padding: 1.25rem;
   @include v-large {
     padding: 1.2rem 3rem;
+  }
+  &.fixed{
+    pointer-events: none;
+    transition: transform .5s;
+    z-index: 99;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: -150px;
+    background: #fff;
+    .searchBox.active{
+      top: 45px !important;
+    }
+    @include v-large{
+      top: -90px;
+      .searchBox.active{
+        top: 0 !important;
+      }
+    }
+    
+  }
+  &.scrollUp{
+    z-index: 98;
+    pointer-events: all;
+    transform: translateY(100%);
   }
   .headContainer {
     max-width: 112rem;
@@ -170,7 +195,48 @@ header {
           .dropdown {
             display: block;
             .dropdownInner{
-              
+              .searchResults{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                width: 100%;
+                list-style: none;
+                .universalItem{
+                  padding: .75rem 0;
+                  margin-bottom: 0;
+                  width: 100%;
+                  display: block;
+                  .universalItemLink{
+                    display: block;
+                    padding-left: 0;
+                    text-decoration: none;
+                    .universalItemText{
+                      min-height: 1.5rem;
+                      vertical-align: middle;
+                      display: inline-block;
+                      width: 85%;
+                      padding-bottom: 0;
+                      padding-left: 2.5rem;
+                      margin-bottom: 0;
+                      overflow: hidden;
+                      position: relative;
+                      .svgIcon{
+                        position: absolute;
+                        top: .1rem;
+                        left: .25rem;
+                      }
+                      .universalItemTitle{
+                        position: relative;
+                        display: block;
+                        padding-bottom: 0;
+                        margin-bottom: 0;
+                        color: #111;
+                        word-break: break-word;
+                      }
+                    }
+                  }
+                }
+              }
             }
           }
         }

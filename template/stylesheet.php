@@ -3,8 +3,9 @@ $styles = [
     'index.php' => 'index.css',
     'cart.php' => 'cart.css',
     'itemDet.php' => 'itemDet.css',
-    'login.php' => 'login.css',
-    'wishList.php' => 'wishList.css'
+    'profile.php' => 'profile.css',
+    'wishList.php' => 'wishList.css',
+    'itemList.php' => 'itemList.css'
 ];
 ?>
 
