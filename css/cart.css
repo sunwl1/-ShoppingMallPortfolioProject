@@ -81,3 +81,9 @@
 .cart .cartWrapper .cartfooter .checkoutBox { margin-top: 16px; margin-bottom: 16px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; width: 100%; }
 
 .cart .cartWrapper .cartfooter .checkoutBox .checkoutBtn { display: inline-block; width: 100%; max-width: 352px; height: 40px; margin: 0; border: 1px solid transparent; border-radius: 2px; background: none; font-weight: 400; font-size: 0.8125rem; line-height: 37px; text-decoration: none; vertical-align: middle; white-space: nowrap; cursor: pointer; background-clip: padding-box; overflow: visible; color: #fff; background: #004f93; text-align: center; }
+
+.cart .cartWrapper .noproduct { min-height: 380px; display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+
+.cart .cartWrapper .noproduct img { height: 200px; width: 200px; }
+
+.cart .cartWrapper .noproduct .noproductText { text-align: center; }

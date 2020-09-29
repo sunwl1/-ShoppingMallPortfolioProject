@@ -91,7 +91,7 @@
                     <a class="allCategory" role="button" data-index="0">모든 제품</a>
                 </li>
                 <li>
-                    <a href="" role="button" data-index="1">디지털 쇼룸</a>
+                    <a href="<?=$root ?>/showroom.php" role="button" data-index="1">디지털 쇼룸</a>
                 </li>
                 <li>
                     <a href="" role="button" data-index="2" class="navMainSmall">이달의 혜택</a>
@@ -130,11 +130,11 @@
         <nav class="menuSubHidden menuSubNav">
             <span class="menuSubHeading">모든제품</span>
             <ul class="menuSubList">
-                <li><a href="" role="button">가구</a></li>
-                <li><a href="" role="button">소파/암체어</a></li>
-                <li><a href="" role="button">침대/매트리스</a></li>
-                <li><a href="" role="button">수납/정리</a></li>
-                <li><a href="" role="button">어린이 IKEA</a></li>
+                <li><a href="<?=$root ?>/itemList.php" role="button">가구</a></li>
+                <li><a href="<?=$root ?>/itemList.php" role="button">소파/암체어</a></li>
+                <li><a href="<?=$root ?>/itemList.php" role="button">침대/매트리스</a></li>
+                <li><a href="<?=$root ?>/itemList.php" role="button">수납/정리</a></li>
+                <li><a href="<?=$root ?>/itemList.php" role="button">어린이 IKEA</a></li>
             </ul>
         </nav>
     </div>

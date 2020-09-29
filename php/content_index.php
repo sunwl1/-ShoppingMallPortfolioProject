@@ -3,7 +3,7 @@
     <div class="event">
       <div class="eventImg">
         <a href="/teamproject/" target="_blank">
-          <img src="<?=$imgDir?>event1.webp" alt="이벤트 이미지" />
+          <img src="<?= $imgDir ?>event1.webp" alt="이벤트 이미지" />
         </a>
       </div>
       <div class="eventSum">
@@ -29,14 +29,14 @@
   <section class="mains">
     <div class="news">
       <div class="newsItemContainer">
-        <img src="<?=$imgDir?>news1.webp" alt="뉴스 이미지" />
+        <img src="<?= $imgDir ?>news1.webp" alt="뉴스 이미지" />
         <h2>IKEA 카탈로그 2021이 출시되었습니다!</h2>
         <p>홈퍼니싱 팁과 아이디어로 가득한 올해의 새로운 카탈로그를 지금 만나보세요.</p>
         <a href="">자세히 보기</a>
       </div>
 
       <div class="newsItemContainer">
-        <img src="<?=$imgDir?>news2.webp" alt="뉴스 이미지" />
+        <img src="<?= $imgDir ?>news2.webp" alt="뉴스 이미지" />
         <h2>IKEA 플래닝 스튜디오 신도림 오픈</h2>
         <p>
           꿈꾸던 공간이 상담으로 실현되는 곳, IKEA 플래닝 스튜디오 신도림이 오픈했습니다! 현대백화점 디큐브시티
@@ -47,8 +47,9 @@
     </div>
   </section>
   <section class="mains">
-    <div class="monthly"></div>
+    <div class="pointGallery"></div>
   </section>
+
   <section class="mains">
     <div class="informs">
       <h2>IKEA 주요 정보</h2>
@@ -84,3 +85,6 @@
   <section class="mains"></section>
   <section class="mains"></section>
 </article>
+
+<script src="<?=$scriptDir ?>showroom.js"></script>
+<script src="<?=$scriptDir ?>createGridMain.js"></script>

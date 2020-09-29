@@ -1,6 +1,6 @@
 .profile { padding-top: 1rem; }
 
-@media (min-width: 56.25em) { .profile { max-width: 75%; -webkit-box-flex: 0; -ms-flex: 0 0 75%; flex: 0 0 75%; margin: 2.5rem 0; padding: 2rem 1rem; } }
+@media (min-width: 56.25em) { .profile { max-width: 75%; -webkit-box-flex: 0; -ms-flex: 0 0 75%; flex: 0 0 75%; margin: 2.5rem auto; padding: 2rem 1rem; } }
 
 .profile .profileContainer { display: block; margin: auto; padding: 0.5rem; max-width: 90rem; }
 

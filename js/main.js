@@ -84,6 +84,7 @@ window.addEventListener('wheel', (e) => {
     offset: 0,
     height: 0,
   };
+  let isFixed;
   if (window.matchMedia('(min-width: 56.25rem)').matches) {
     head.offset = 100;
     head.height = 80;
@@ -96,11 +97,12 @@ window.addEventListener('wheel', (e) => {
     document.querySelector('header').classList.remove('scrollUp');
     document.querySelector('.pageContainer').style.marginTop = `${head.height}px`;
   } else {
-    document.querySelector('header').classList.add('scrollUp');
+    if(document.querySelector('header').classList.contains('fixed')) document.querySelector('header').classList.add('scrollUp');
     if (window.scrollY < head.height) {
       document.querySelector('header').classList.remove('fixed');
       document.querySelector('header').classList.remove('scrollUp');
       document.querySelector('.pageContainer').style.marginTop = 0;
+      isFixed = false;
     }
   }
 });

@@ -1,28 +1,27 @@
-<link rel="stylesheet" href="../css/itemDet.css" />
 <div class="wrapper">
     <div class="locaNavContainer">
         <nav class="locaNav">
             <ol class="locaNavList">
-                <li><a href="">소파</a></li>
-                <li><a href="">소파</a></li>
+                <li><a href="">전체보기</a></li>
+                <li><a href="<?=$root ?>/itemList.php">가구</a></li>
             </ol>
         </nav>
     </div>
     <div class="itemContainer">
         <div class="itemImg">
             <div class="itemImgContainer">
-                <div class="imgPageNumb"></div>
+                <!-- <div class="imgPageNumb"></div> -->
                 <div class="imgContainerEach">
-                    <img class="itemImage" src="../img/itemimg1.webp" alt="상품 이미지" />
+                    <img class="itemImage" src="<?= $imgDir ?>itemimg1.webp" alt="상품 이미지" />
                 </div>
                 <div class="imgContainerEach">
-                    <img class="itemImage" src="../img/itemimg2.webp" alt="상품 이미지" />
+                    <img class="itemImage" src="<?= $imgDir ?>itemimg2.webp" alt="상품 이미지" />
                 </div>
                 <div class="imgContainerEach">
-                    <img class="itemImage" src="../img/itemimg3.webp" alt="상품 이미지" />
+                    <img class="itemImage" src="<?= $imgDir ?>itemimg3.webp" alt="상품 이미지" />
                 </div>
                 <div class="imgContainerEach">
-                    <img class="itemImage" src="../img/itemimg4.webp" alt="상품 이미지" />
+                    <img class="itemImage" src="<?= $imgDir ?>itemimg4.webp" alt="상품 이미지" />
                 </div>
             </div>
             <div class="scrollIndicator">
@@ -57,7 +56,7 @@
                     <button type="button">
                         <div>
                             <span class="title">상품평</span>
-                            <span class="rates"><img src="../img/stars.svg" alt="평점" /> (336)</span>
+                            <span class="rates"><img src="<?= $imgDir ?>stars.svg" alt="평점" /> (336)</span>
                         </div>
                         <svg focusable="false" viewBox="0 0 24 24" class="svgIcon" aria-hidden="true">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M15.5996 11.9999L9.81456 17.7857L8.40026 16.3716L12.7714 11.9999L8.40026 7.62823L9.81457 6.21411L15.5996 11.9999Z"></path>
@@ -133,4 +132,4 @@
         <div class="itemDetailHead"></div>
     </div>
 </div>
-<script src="./js/itemDet.js"></script>
+<script src="<?= $scriptDir ?>itemDet.js"></script>

@@ -92,5 +92,12 @@
         <a class="checkoutBtn" role="button" href="">결제하기</a>
       </div>
     </div>
+    <div class="noproduct">
+      <img src="https://order.ikea.com/kr/ko/checkout/static/media/ill-alien.cb42647f.svg" alt="장바구니 비어있음 이미지">
+      <div class="noproductText">
+        <h2>장바구니</h2>
+        <p>현재 장바구니가 비어 있습니다.</p>
+      </div>
+    </div>
   </div>
 </div>

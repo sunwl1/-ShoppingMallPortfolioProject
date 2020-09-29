@@ -5,7 +5,8 @@ $styles = [
     'itemDet.php' => 'itemDet.css',
     'profile.php' => 'profile.css',
     'wishList.php' => 'wishList.css',
-    'itemList.php' => 'itemList.css'
+    'itemList.php' => 'itemList.css',
+    'showroom.php' => 'showroom.css'
 ];
 ?>
 

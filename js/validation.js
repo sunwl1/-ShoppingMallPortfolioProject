@@ -1,5 +1,6 @@
 const loginForm = document.querySelector('.loginForm');
 const loginBtn = document.querySelector('.loginSubmitBtn');
+const userLogin;
 
 const checkEmpty = (value, dataName) => {
   if (value == '') {
@@ -38,7 +39,9 @@ const checkPwd = (pwds) => {
 };
 
 const checkAll = () => {
-  if (checkId(loginForm.userid.value) && checkPwd(loginForm.userpwd.value)) return alert('로그인 성공!');
+  if (checkId(loginForm.userid.value) && checkPwd(loginForm.userpwd.value)){
+  userLogin = true;
+  }
   return false;
 };
 

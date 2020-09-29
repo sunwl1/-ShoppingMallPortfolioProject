@@ -1,24 +1,8 @@
-<?php include "./template/common.php" ?>
-<!DOCTYPE html>
-<html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>IKEA 로그인</title>
-    <link rel="shortcut icon" href="https://www.ikea.com/kr/ko/static/favicon.ae56e0e313f28e74da3bed8057d1d1fd.ico">
-    <link rel="stylesheet" href="<?=$cssDir?>reset.css" />
-    <link rel="stylesheet" href="<?=$cssDir?>login.css" />
-    <script>
-      if(userLogin){
-        <?php header('Location: ./profile.php'); ?>
-      }
-    </script>
-  </head>
-  <body>
+<link rel="stylesheet" href="../css/login.css" />
     <div class="wrapper">
       <div class="loginHeader">
         <div class="loginHeaderTop">
-          <a href="./" class="goBackBtn">
+          <a href="../" class="goBackBtn">
             <svg
               focusable="false"
               viewBox="0 0 24 24"
@@ -130,5 +114,3 @@
     </div>
     <script src="<?=$scriptDir ?>login.js"></script>
     <script src="<?=$scriptDir ?>validation.js"></script>
-  </body>
-</html>

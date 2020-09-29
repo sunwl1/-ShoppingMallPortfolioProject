@@ -68,7 +68,7 @@
 
 .cart .cartWrapper .cartList .cartItem .itemContent .itemControls .controllers .addCart .addCartBtn .btnIcon { width: 1.5rem; vertical-align: -6px; margin-right: .5rem; }
 
-.cart .cartWrapper .cartfooter { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: center; -ms-flex-align: center; align-items: center; padding-top: 16px; width: 100%; }
+.cart .cartWrapper .cartfooter { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: center; -ms-flex-align: center; align-items: center; padding-top: 16px; padding-bottom: 3rem; width: 100%; }
 
 .cart .cartWrapper .cartfooter .orderTotal { margin-top: 8px; font-weight: 700; font-size: 14px; text-align: initial; border: dashed #cacaca; border-width: 1px 0; width: 100%; margin-bottom: 32px; }
 
