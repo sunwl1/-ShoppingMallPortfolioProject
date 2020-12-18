@@ -1,0 +1,63 @@
+.profile { padding-top: 1rem; }
+
+@media (min-width: 56.25em) { .profile { max-width: 75%; -webkit-box-flex: 0; -ms-flex: 0 0 75%; flex: 0 0 75%; margin: 2.5rem auto; padding: 2rem 1rem; } }
+
+.profile .profileContainer { display: block; margin: auto; padding: 0.5rem; max-width: 90rem; }
+
+.profile .profileContainer .profileRow { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-pack: start; -ms-flex-pack: start; justify-content: flex-start; margin: 1.5rem 0; width: 100%; min-height: 1px; padding: 1rem 0.5rem; }
+
+@media (min-width: 56.25em) { .profile .profileContainer .profileRow { margin: 0 -1rem; } }
+
+.profile .profileContainer .profileRow .profileHeader h1 { word-break: break-word; font-size: 1.375rem; color: #111; font-weight: 700; }
+
+.profile .profileContainer .profileRow .profileHeader span { color: #484848; display: block; }
+
+.profile .profileContainer .profileRow .profileHeader span a { font-weight: 400; color: #484848; }
+
+.profile .dashboard { min-height: 0; padding-bottom: 2rem; display: block; margin: auto; padding: 0.5rem; max-width: 90rem; }
+
+.profile .dashboard .dashboardInner { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; width: 100%; min-height: 1px; padding: 1rem 0.5rem; }
+
+.profile .dashboard .dashboardInner .activities { margin: 0 -0.5rem; margin-bottom: 2.5rem; display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; width: 100%; }
+
+.profile .dashboard .dashboardInner .activities .activityItem { position: relative; width: 100%; min-height: 1px; margin-bottom: 1rem; }
+
+@media (min-width: 56.25em) { .profile .dashboard .dashboardInner .activities .activityItem { padding: 2rem 1rem; display: inline-block; -webkit-box-flex: 0; -ms-flex: 0 0 33.33333%; flex: 0 0 33.33333%; max-width: 33.33333%; } }
+
+.profile .dashboard .dashboardInner .activities .activityItem .actLink { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; word-break: break-word; border-radius: 4px; padding: 1.875rem; padding-right: 1.25rem; border: 1px solid #dfdfdf; color: #111; fill: #111; font-weight: normal; text-decoration: none; width: 100%; -webkit-transition: all 0.2s cubic-bezier(0.19, 1, 0.22, 1); transition: all 0.2s cubic-bezier(0.19, 1, 0.22, 1); }
+
+.profile .dashboard .dashboardInner .activities .activityItem .actLink:hover { border-color: #ababab; }
+
+.profile .dashboard .dashboardInner .activities .activityItem .actLink .textbox { margin-right: 1rem; }
+
+.profile .dashboard .dashboardInner .activities .activityItem .actLink .textbox .boxTitle { display: block; letter-spacing: -0.58px; line-height: 0.9; color: #333; }
+
+.profile .dashboard .dashboardInner .activities .activityItem .actLink .textbox .boxpara { color: #484848; font-size: 0.75rem; display: block; line-height: 1.1; letter-spacing: -0.51px; margin-top: 0.625rem; }
+
+.profile .dashboard .dashboardInner .activities .activityItem .actLink .svgIcon { display: inline-block; height: 1.5rem; width: 1.5rem; fill: currentColor; -webkit-transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1); transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1); -ms-flex-negative: 0; flex-shrink: 0; margin-left: auto; }
+
+.profile .dashboard .dashboardInner .profileTabs { width: 100%; }
+
+.profile .dashboard .dashboardInner .profileTabs .tabList { position: relative; display: -webkit-box; display: -ms-flexbox; display: flex; overflow-x: auto; overflow-y: hidden; width: 100%; }
+
+.profile .dashboard .dashboardInner .profileTabs .tabList .tabBtn { position: relative; background: none; border: 0; border-bottom: 2px solid #dfdfdf; color: #484848; display: inline-block; font-size: 0.875rem; font-weight: 700; line-height: 1.71429; margin: 0; padding: 0 0.9375rem 0.9375rem 0; text-align: left; cursor: pointer; -webkit-box-flex: 1; -ms-flex: 1 0 auto; flex: 1 0 auto; margin-left: 0.625rem; }
+
+.profile .dashboard .dashboardInner .profileTabs .tabList .tabBtn:first-child { margin-left: 0; }
+
+.profile .dashboard .dashboardInner .profileTabs .tabList .tabBtn:hover { border-bottom-color: #ccc; color: #111; }
+
+.profile .dashboard .dashboardInner .profileTabs .tabList .tabBtn.tabActive { border-bottom-color: #0058a3; color: #111; }
+
+.profile .dashboard .dashboardInner .profileTabs .tabPanel { outline: none; padding: 3.125rem 0; position: relative; display: none; }
+
+.profile .dashboard .dashboardInner .profileTabs .tabPanel .panelItem { margin-bottom: 3.125rem; }
+
+.profile .dashboard .dashboardInner .profileTabs .tabPanel .panelItem .panelItemHeading { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -ms-flex-align: center; align-items: center; margin-bottom: 0.625rem; }
+
+.profile .dashboard .dashboardInner .profileTabs .tabPanel .panelItem .panelItemHeading span { color: #111; font-weight: bold; display: block; }
+
+.profile .dashboard .dashboardInner .profileTabs .tabPanel .panelItem .panelItemHeading a { color: #111; font-weight: bold; text-decoration: underline; }
+
+.profile .dashboard .dashboardInner .profileTabs .tabPanel .panelItem .panelItemText { display: block; }
+
+.profile .dashboard .dashboardInner .profileTabs .tabPanel.pActive { display: block; }

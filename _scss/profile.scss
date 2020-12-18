@@ -1,0 +1,195 @@
+@import '../_scss/mixin';
+
+.profile {
+  padding-top: 1rem;
+  @include v-large {
+    max-width: 75%;
+    flex: 0 0 75%;
+    margin: 2.5rem 0;
+    padding: 2rem 1rem;
+  }
+  .profileContainer {
+    display: block;
+    margin: auto;
+    padding: 0.5rem;
+    max-width: 90rem;
+    .profileRow {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      margin: 1.5rem 0;
+      width: 100%;
+      min-height: 1px;
+      padding: 1rem 0.5rem;
+      @include v-large {
+        margin: 0 -1rem;
+      }
+      .profileHeader {
+        h1 {
+          word-break: break-word;
+          font-size: 1.375rem;
+          color: #111;
+          font-weight: 700;
+        }
+        span {
+          color: #484848;
+          display: block;
+          a {
+            font-weight: 400;
+            color: #484848;
+          }
+        }
+      }
+    }
+  }
+  .dashboard {
+    min-height: 0;
+    padding-bottom: 2rem;
+    display: block;
+    margin: auto;
+    padding: 0.5rem;
+    max-width: 90rem;
+    .dashboardInner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+      min-height: 1px;
+      padding: 1rem 0.5rem;
+      .activities {
+        margin: 0 -0.5rem;
+        margin-bottom: 2.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        .activityItem {
+          position: relative;
+          width: 100%;
+          min-height: 1px;
+          margin-bottom: 1rem;
+          @include v-large {
+            padding: 2rem 1rem;
+            display: inline-block;
+            flex: 0 0 33.33333%;
+            max-width: 33.33333%;
+          }
+          .actLink {
+            display: flex;
+            justify-content: space-between;
+            word-break: break-word;
+            border-radius: 4px;
+            padding: 1.875rem;
+            padding-right: 1.25rem;
+            border: 1px solid #dfdfdf;
+            color: #111;
+            fill: #111;
+            font-weight: normal;
+            text-decoration: none;
+            width: 100%;
+            transition: all 0.2s cubic-bezier(0.19, 1, 0.22, 1);
+            &:hover {
+              border-color: #ababab;
+            }
+            .textbox {
+              margin-right: 1rem;
+              .boxTitle {
+                display: block;
+                letter-spacing: -0.58px;
+                line-height: 0.9;
+                color: #333;
+              }
+              .boxpara {
+                color: #484848;
+                font-size: 0.75rem;
+                display: block;
+                line-height: 1.1;
+                letter-spacing: -0.51px;
+                margin-top: 0.625rem;
+              }
+            }
+            .svgIcon {
+              display: inline-block;
+              height: 1.5rem;
+              width: 1.5rem;
+              fill: currentColor;
+              transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+              flex-shrink: 0;
+              margin-left: auto;
+            }
+          }
+        }
+      }
+      .profileTabs {
+        width: 100%;
+        .tabList {
+          position: relative;
+          display: flex;
+          overflow-x: auto;
+          overflow-y: hidden;
+          width: 100%;
+          .tabBtn {
+            position: relative;
+            background: none;
+            border: 0;
+            border-bottom: 2px solid #dfdfdf;
+            color: #484848;
+            display: inline-block;
+            font-size: 0.875rem;
+            font-weight: 700;
+            line-height: 1.71429;
+            margin: 0;
+            padding: 0 0.9375rem 0.9375rem 0;
+            text-align: left;
+            cursor: pointer;
+            flex: 1 0 auto;
+            margin-left: 0.625rem;
+            &:first-child {
+              margin-left: 0;
+            }
+            &:hover {
+              border-bottom-color: #ccc;
+              color: #111;
+            }
+            &.tabActive {
+              border-bottom-color: $blue;
+              color: #111;
+            }
+          }
+        }
+        .tabPanel {
+          outline: none;
+          padding: 3.125rem 0;
+          position: relative;
+          display: none;
+          .panelItem {
+            margin-bottom: 3.125rem;
+
+            .panelItemHeading {
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              align-items: center;
+              margin-bottom: 0.625rem;
+              span {
+                color: #111;
+                font-weight: bold;
+                display: block;
+              }
+              a {
+                color: #111;
+                font-weight: bold;
+                text-decoration: underline;
+              }
+            }
+            .panelItemText {
+              display: block;
+            }
+          }
+          &.pActive {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}

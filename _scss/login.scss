@@ -1,0 +1,246 @@
+@import "../_scss/mixin";
+
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow-x: hidden;
+  max-width: 100vw;
+  padding: 0;
+  width: 100vw;
+  @include v-medium{
+      display: grid;
+      grid-template-columns: repeat(13, 1fr);
+  }
+  .loginHeader {
+    background: $blue;
+    color: white;
+    display: flex;
+    flex: 0 1 auto;
+    height: auto;
+    flex-direction: column;
+    padding: 1rem 2rem 2rem;
+    justify-content: flex-end;
+    @include v-medium {
+      justify-content: space-between;
+      min-height: 100vh;
+      grid-column: 1 / 6;
+      align-items: flex-start;
+      padding: 2rem;
+    }
+    @include v-large {
+      align-items: flex-end;
+      padding: 2rem 5rem;
+    }
+    .loginHeaderTop {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      max-width: 100%;
+      width: 100%;
+      height: 4.5rem;
+      @include v-medium {
+        height: auto;
+      }
+      @include v-large {
+        justify-content: flex-start;
+        max-width: 16rem;
+      }
+      .goBackBtn {
+        color: white;
+        left: 1.5rem;
+        position: absolute;
+        @include v-medium {
+          display: block;
+        }
+        @include v-large {
+          left: 2rem;
+        }
+        .goBackIcon {
+          display: inline-block;
+          height: 1.5rem;
+          width: 1.5rem;
+          vertical-align: middle;
+          fill: currentColor;
+        }
+      }
+      .topLogo {
+        display: none;
+        width: 88px;
+        height: 44px;
+        @include v-medium {
+          display: block;
+        }
+      }
+    }
+    .loginTitle {
+      margin-top: 1rem;
+      width: 100%;
+      min-height: auto;
+      @include v-medium {
+        min-height: 23rem;
+      }
+      @include v-large {
+        min-height: 19rem;
+      }
+      h1 {
+        color: white;
+        font-size: 24px;
+        line-height: 1.333;
+        letter-spacing: -0.0075rem;
+        font-weight: 700;
+        margin-bottom: 0;
+        margin-block-end: 0;
+        @include v-large {
+          font-size: 32px;
+        }
+      }
+    }
+    .loginFooter{
+        padding: 1rem 0 0;
+        width: 100%;
+        left: 0;
+        position: relative;
+        bottom: 0;
+        top: 0;
+        font-size: 11px;
+        color: #fff;
+        display: none;
+        @include v-medium{
+            display: block;
+        }
+        a{
+            color:#fff;
+            text-decoration: underline;
+        }
+    }
+  }
+  .loginFormContainer {
+    background: #fff;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    padding: 0 2rem 2rem;
+    justify-content: space-between;
+    @include v-medium {
+      padding: 2rem 5rem;
+      grid-column: 6 / 14;
+      justify-content: center;
+    }
+    .loginForm {
+      padding: 1rem 0;
+      @include v-medium {
+        width: 100%;
+      }
+      .formField {
+        display: block;
+        margin-bottom: 1.25rem;
+        & + .formField {
+          margin-bottom: 0;
+        }
+        .inputWrap {
+          position: relative;
+          display: block;
+          padding: 0;
+          margin-bottom: 0.625rem;
+          input {
+            display: block;
+            width: 100%;
+            margin: 0;
+            outline: 0;
+            padding: 1.5rem 0 0.0625rem;
+            border: 0;
+            border-radius: 0;
+            border-bottom: 1px solid #929292;
+            appearance: none;
+            transition: box-shadow 0.2s;
+            font-size: 1rem;
+            line-height: 1.5;
+
+            &.error {
+              border-bottom-color: $red;
+              box-shadow: 0 1px 0 $red;
+            }
+          }
+          label {
+            font-size: 1rem;
+            transition: all 0.2s ease-in-out;
+            transform-origin: top left;
+            pointer-events: none;
+            position: absolute;
+            top: 1.4375rem;
+            display: inline-block;
+            color: #484848;
+          }
+          .visBtn {
+            padding: 0.3125rem;
+            color: #111;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            background: none;
+            @include Btn;
+            .visicon {
+              flex-shrink: 0;
+              display: inline-block;
+              height: 1.5rem;
+              width: 1.5rem;
+              vertical-align: middle;
+              fill: currentColor;
+              transition: transform 0.3s ease;
+            }
+            .visBtnLabel {
+              display: none;
+            }
+          }
+        }
+      }
+      .findPwd {
+        text-decoration: none;
+        font-weight: 400;
+        font-size: 0.75rem;
+        display: block;
+        color: rgb(102, 102, 102);
+      }
+      .loginSubmitBtn {
+        width: 100%;
+        height: 3.5rem;
+        background: $blue;
+        color: #fff;
+        border-radius: 40px;
+        padding: 0 2.5rem;
+        margin-top: 24px;
+        @include Btn;
+      }
+    }
+    .signupBtn{
+        width: 100%;
+        height: 3.5rem;
+        background: #f5f5f5;
+        color: #111;
+        border-radius: 40px;
+        padding: 0 2.5rem;
+        @include Btn;
+    }
+    .loginFooter{
+        padding: 1rem 0 0;
+        width: 100%;
+        left: 0;
+        position: relative;
+        bottom: 0;
+        top: 0;
+        font-size: 11px;
+        text-align: center;
+        color: rgb(148,148,148);
+        display: block;
+        @include v-medium{
+            display: none;
+        }
+        a{
+            color: rgb(148,148,148);
+            text-decoration: underline;
+        }
+    }
+  }
+}

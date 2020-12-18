@@ -1,0 +1,14 @@
+/* .wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    border: 1px solid red;
+    justify-content: space-between;
+} */
+.wrapper { margin: 0 -1.25rem; overflow: hidden; }
+
+.wrapper .catNav { padding: 0 1.25rem 1.25rem 1.25rem; margin-bottom: -1.25rem; display: -webkit-box; display: -ms-flexbox; display: flex; overflow-x: scroll; overflow-y: hidden; }
+
+.wrapper .catNav .catLists { color: #484848; font-weight: 400; margin-right: .625rem; min-width: 33vw; width: 100%; -webkit-box-sizing: content-box; box-sizing: content-box; text-decoration: none; }
+
+.wrapper .catNav .catLists img { width: 100%; position: relative; height: auto; display: block; }

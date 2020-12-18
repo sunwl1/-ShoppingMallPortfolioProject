@@ -1,0 +1,30 @@
+product
+- name (상품명)
+- description (간단설명)
+- price (가격)
+- rates (평점 5점만점)
+- id(숫자로된코드, 223.22.546 형태)
+- size(상품크기, 15cm x 20cm 형태)
+- related (연관제품들.. id값?)
+
+userInfo
+- username
+- birthday
+- phone
+- email
+- address
+- password
+
+wishList
+- product.name (상품명)
+- category ( 회전의자, 탁자 이런거 )
+- option ( 색상옵션, 블랙 이런거)
+- product.id
+- product.price
+
+cart
+위시리스트와 동일
+
+category
+- 상품카테고리 전체메뉴에 넣을건데 이거 어떻게짜야되는지 모르겠다. 10개정도 넣엇으면 하는데. 햄버거메뉴 - 모든제품에서 나오는 리스트임. 누르면 링크 상품으로 감.
+아마 위에 위시리스트에서 쓰는 category 랑 연결시켜노면 될거같아요~
